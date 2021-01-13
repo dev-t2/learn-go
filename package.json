@@ -1,26 +1,14 @@
 {
   "name": "learn-graphql",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/developer-t2/learn-graphql.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/developer-t2/learn-graphql/issues"
-  },
-  "homepage": "https://github.com/developer-t2/learn-graphql#readme",
+  "author": "DeveloperT2",
+  "license": "MIT",
   "dependencies": {
     "graphql-yoga": "^1.18.3",
     "nodemon": "^2.0.7"
-  },
-  "devDependencies": {},
-  "type": "module"
+  }
 }
