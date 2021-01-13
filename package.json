@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/developer-t2/learn-graphql/issues"
   },
-  "homepage": "https://github.com/developer-t2/learn-graphql#readme"
+  "homepage": "https://github.com/developer-t2/learn-graphql#readme",
+  "dependencies": {
+    "graphql-yoga": "^1.18.3"
+  }
 }
