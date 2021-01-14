@@ -1,6 +1,12 @@
+const person = {
+  name: 'developer-t2',
+  age: 33,
+  gender: 'male',
+};
+
 const resolvers = {
   Query: {
-    name: () => 'Hello GraphQL',
+    person: () => person,
   },
 };
 
