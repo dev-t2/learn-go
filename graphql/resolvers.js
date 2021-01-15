@@ -1,12 +1,9 @@
-const person = {
-  name: 'developer-t2',
-  age: 33,
-  gender: 'male',
-};
+const { people, getById } = require('./db');
 
 const resolvers = {
   Query: {
-    person: () => person,
+    people: () => people,
+    person: (_, { id }) => getById(id),
   },
 };
 
