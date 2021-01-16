@@ -1,19 +1,19 @@
-const fetch = require('node-fetch');
+const { default: axios } = require('axios');
+const asiox = require('axios');
 
 const API_URL = 'https://yts.mx/api/v2/list_movies.json?';
 
-exports.getMovies = (limit, rating) => {
-  let requestUrl = API_URL;
+exports.getMovies = async (limit, rating) => {
+  const {
+    data: {
+      data: { movies },
+    },
+  } = await axios(API_URL, {
+    params: {
+      limit,
+      minimum_rating: rating,
+    },
+  });
 
-  if (limit > 0 && rating > 0) {
-    requestUrl = `${requestUrl}limit=${limit}&minimum_rating=${rating}`;
-  } else if (limit > 0) {
-    requestUrl = `${requestUrl}limit=${limit}`;
-  } else if (rating > 0) {
-    requestUrl = `${requestUrl}minimum_rating=${rating}`;
-  }
-
-  return fetch(requestUrl)
-    .then((res) => res.json())
-    .then((json) => json.data.movies);
+  return movies;
 };
