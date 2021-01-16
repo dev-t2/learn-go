@@ -42,7 +42,7 @@ exports.addMovie = (name, score) => {
 };
 
 exports.deleteMovie = (id) => {
-  const cleanedMovies = movies.filter((movie) => movies.id !== id);
+  const cleanedMovies = movies.filter((movie) => movie.id !== id);
 
   if (movies.length > cleanedMovies.length) {
     movies = cleanedMovies;

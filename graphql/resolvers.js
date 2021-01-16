@@ -1,4 +1,4 @@
-const { getMovies, getById, addMovie } = require('./db');
+const { getMovies, getById, addMovie, deleteMovie } = require('./db');
 
 const resolvers = {
   Query: {
@@ -7,6 +7,7 @@ const resolvers = {
   },
   Mutation: {
     addMovie: (_, { name, score }) => addMovie(name, score),
+    deleteMovie: (_, { id }) => deleteMovie(id),
   },
 };
 
