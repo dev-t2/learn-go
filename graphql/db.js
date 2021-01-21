@@ -1,17 +1,47 @@
-const { default: axios } = require('axios');
-const asiox = require('axios');
+const axios = require('axios');
 
-const API_URL = 'https://yts.mx/api/v2/list_movies.json?';
+const BASE_URL = 'https://yts-proxy.now.sh/';
+const LIST_MOVIES_URL = `${BASE_URL}list_movies.json`;
+const MOVIE_DETAILS_URL = `${BASE_URL}movie_details.json`;
+const MOVIE_SUGGESTIONS_URL = `${BASE_URL}movie_suggestions.json`;
 
 exports.getMovies = async (limit, rating) => {
   const {
     data: {
       data: { movies },
     },
-  } = await axios(API_URL, {
+  } = await axios(LIST_MOVIES_URL, {
     params: {
       limit,
       minimum_rating: rating,
+    },
+  });
+
+  return movies;
+};
+
+exports.getMovie = async (id) => {
+  const {
+    data: {
+      data: { movie },
+    },
+  } = await axios(MOVIE_DETAILS_URL, {
+    params: {
+      movie_id: id,
+    },
+  });
+
+  return movie;
+};
+
+exports.getSuggestions = async (id) => {
+  const {
+    data: {
+      data: { movies },
+    },
+  } = await axios(MOVIE_SUGGESTIONS_URL, {
+    params: {
+      movie_id: id,
     },
   });
 
