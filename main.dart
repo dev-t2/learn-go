@@ -1,10 +1,10 @@
-String sayHello(String name) {
-  return 'Hello $name, Nice to meet you!';
+String sayHello({required String name, required int age}) {
+  return 'Hello $name, Are you $age.';
 }
 
 int plus(int a, int b) => a + b;
 
 void main(List<String> args) {
-  print(sayHello('Austin'));
+  print(sayHello(name: 'Austin', age: 35));
   print(plus(1, 2));
 }
