@@ -1,4 +1,4 @@
-String sayHello({required String name, required int age}) {
+String sayHello({String name = '', required int age}) {
   return 'Hello $name, Are you $age.';
 }
 
