@@ -10,4 +10,10 @@ func main() {
 	b = "B"
 
 	fmt.Println(a, b)
+
+	var c int = 3
+	var d int = 4
+	var e int = c * d
+
+	fmt.Println(e)
 }
