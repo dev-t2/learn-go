@@ -3,17 +3,17 @@ package main
 import "fmt"
 
 func main() {
-	var a int = 1
-	var b string = "A"
+	var num1 int = 1
+	var str1 string = "a"
 
-	a = 2
-	b = "B"
+	num1 = 2
+	str1 = "b"
 
-	fmt.Println(a, b)
+	fmt.Println(num1, str1)
 
-	var c int = 3
-	var d int = 4
-	var e int = c * d
+	var num2 int = 3
+	var num3 int = 4
+	var sum int = num2 + num3
 
-	fmt.Println(e)
+	fmt.Println(sum)
 }
