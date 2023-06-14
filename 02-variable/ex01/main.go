@@ -13,7 +13,7 @@ func main() {
 
 	var num2 int = 3
 	var num3 int = 4
-	var sum int = num2 + num3
+	var sum int = num2 + num3 // 3 + 4 = 7
 
 	fmt.Println(sum)
 }
