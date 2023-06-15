@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	var num1 int = 1
-	var num2 float64 = 2.5
+	var num1 = 1
+	var num2 = 2.5
 	var num3 int = int(num2) // 2
 	var num4 float64 = float64(num1 * num3) // 1 * 2 = 2
 	var num5 int64 = 5
