@@ -2,17 +2,21 @@ package main
 
 import "fmt"
 
-func Divide(a, b int) (result int, success bool) {
+func Divide1(a, b int) (int, bool) {
 	if b == 0 {
-		// return 0, false
+		return 0, false
+	}
 
+	return a / b, true
+}
+
+func Divide2(a, b int) (result int, success bool) {
+	if b == 0 {
 		result = 0
 		success = false
 
 		return
 	}
-
-	// return a / b, true
 
 	result = a / b
 	success = true
@@ -21,11 +25,11 @@ func Divide(a, b int) (result int, success bool) {
 }
 
 func main() {
-	var result, success = Divide(9, 3)
+	var result, success = Divide1(9, 3)
 
 	fmt.Println(result, success)
 
-	result, success = Divide(9, 0)
+	result, success = Divide2(9, 0)
 
 	fmt.Println(result, success)
 }
