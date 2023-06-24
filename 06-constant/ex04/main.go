@@ -4,6 +4,8 @@ import "fmt"
 
 type Room uint8
 
+
+// Bit Flags
 const (
 	MasterRoom Room = 1 << iota
 	BathRoom
