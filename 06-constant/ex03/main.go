@@ -2,9 +2,21 @@ package main
 
 import "fmt"
 
-const Pig = 0
-const Cow = 1
-const Chicken = 2
+// const Pig = 0
+// const Cow = 1
+// const Chicken = 2
+
+// const (
+// 	 Pig = iota
+//   Cow = iota
+//   Chicken = iota
+// )
+
+const (
+	Pig = iota
+  Cow
+  Chicken
+)
 
 func PrintAnimal(animal int) {
 	if animal == Pig {
