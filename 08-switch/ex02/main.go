@@ -3,12 +3,12 @@ package main
 import "fmt"
 
 func main() {
-	var num = 19
+	var num = 18
 
 	switch true {
 	// switch {
-	case num < 10 || num > 30:
-		fmt.Println("num < 10 || num >= 30")
+	case num < 10, num > 30:
+		fmt.Println("num < 10, num >= 30")
 	case num >= 10 && num < 20:
 		fmt.Println("num >= 10 && num < 20")
 	case num >= 15 && num < 25:
