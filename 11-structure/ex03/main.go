@@ -6,7 +6,7 @@ import (
 )
 
 type User struct {
-	Id   int
+	Id   	 int32
 	Height float64
 }
 
