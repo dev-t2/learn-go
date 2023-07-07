@@ -14,6 +14,7 @@ type Owner struct {
 
 type Customer struct {
 	User
+	Name  string
 	Level int
 }
 
@@ -26,7 +27,7 @@ func main() {
 
 	fmt.Printf("아이디: %d, 이름: %s, 레벨: %d\n", owner.UserInfo.Id, owner.UserInfo.Name, owner.Level)
 
-	var customer = Customer{user, 2}
+	var customer = Customer{user, "Go Language", 2}
 	
-	fmt.Printf("아이디: %d, 이름: %s, 레벨: %d\n", customer.Id, customer.Name, customer.Level)
+	fmt.Printf("아이디: %d, 닉네임: %s, 이름: %s, 레벨: %d\n", customer.Id, customer.Name, customer.User.Name, customer.Level)
 }
