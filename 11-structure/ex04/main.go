@@ -15,10 +15,10 @@ type User1 struct {
 
 type User2 struct {
 	A int8
-	B int8
 	C int8
+	E int8
+	B int
 	D int
-	E int
 }
 
 func main() {
