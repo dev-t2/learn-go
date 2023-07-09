@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func Divide1(a, b int) (int, bool) {
 	if b == 0 {
@@ -24,6 +27,10 @@ func Divide2(a, b int) (result int, success bool) {
 	return
 }
 
+func LenAndUpper(str string) (int, string) {
+	return len(str), strings.ToUpper(str)
+}
+
 func main() {
 	var result, success = Divide1(9, 3)
 
@@ -32,4 +39,6 @@ func main() {
 	result, success = Divide2(9, 0)
 
 	fmt.Println(result, success)
+
+	fmt.Println(LenAndUpper("Go 언어"))
 }
