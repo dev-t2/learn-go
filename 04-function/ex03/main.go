@@ -1,37 +1,19 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
-func Divide1(a, b int) (int, bool) {
-	if b == 0 {
-		return 0, false
-	}
-
-	return a / b, true
-}
-
-func Divide2(a, b int) (result int, success bool) {
-	if b == 0 {
-		result = 0
-		success = false
-
+func printNumber(num int) {
+	if num == 0 {
 		return
 	}
 
-	result = a / b
-	success = true
+	fmt.Println(num)
 
-	return
+	printNumber(num - 1)
+
+	fmt.Println("After", num)
 }
 
 func main() {
-	var result, success = Divide1(9, 3)
-
-	fmt.Println(result, success)
-
-	result, success = Divide2(9, 0)
-
-	fmt.Println(result, success)
+	printNumber(3)
 }

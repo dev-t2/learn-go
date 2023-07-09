@@ -2,18 +2,14 @@ package main
 
 import "fmt"
 
-func printNumber(num int) {
-	if num == 0 {
-		return
+func F(n int) int {
+	if n < 2 {
+		return n
 	}
 
-	fmt.Println(num)
-
-	printNumber(num - 1)
-
-	fmt.Println("After", num)
+	return F(n-2) + F(n-1)
 }
 
 func main() {
-	printNumber(3)
+	fmt.Println(F(9))
 }

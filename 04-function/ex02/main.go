@@ -1,16 +1,37 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-func AverageScore(math int, english int, history int) {
-	var total = math + english + history
-	var average = total / 3
+func Divide1(a, b int) (int, bool) {
+	if b == 0 {
+		return 0, false
+	}
 
-	fmt.Println("평균 점수는", average, "점 입니다.")
+	return a / b, true
+}
+
+func Divide2(a, b int) (result int, success bool) {
+	if b == 0 {
+		result = 0
+		success = false
+
+		return
+	}
+
+	result = a / b
+	success = true
+
+	return
 }
 
 func main() {
-	AverageScore(80, 74, 95)
-	AverageScore(88, 92, 53)
-	AverageScore(78, 73, 78)
+	var result, success = Divide1(9, 3)
+
+	fmt.Println(result, success)
+
+	result, success = Divide2(9, 0)
+
+	fmt.Println(result, success)
 }
