@@ -41,8 +41,19 @@ func main() {
 
 	fmt.Println()
 
+	fmt.Println(ToUpper(str))
+
 	var addr4 = strHeader.Data
 
-	fmt.Println(ToUpper(str))
 	fmt.Printf("addr4:\t%x\n", addr4)
+
+	fmt.Println()
+
+	str = "Hello Go World"
+
+	var addr5 = strHeader.Data
+
+	fmt.Printf("addr5:\t%x\n", addr5)
+	fmt.Println(strings.ToUpper(str))
+	fmt.Printf("addr5:\t%x\n", addr5)
 }
