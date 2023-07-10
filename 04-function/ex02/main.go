@@ -26,6 +26,12 @@ func Divide2(a, b int) (result int, success bool) {
 	return
 }
 
+func DeferFunc() {
+	defer fmt.Println("DeferFunc Complete")
+
+	fmt.Println("DeferFunc")
+}
+
 func main() {
 	var result, success = Divide1(9, 3)
 
@@ -34,4 +40,6 @@ func main() {
 	result, success = Divide2(9, 0)
 
 	fmt.Println(result, success)
+
+	DeferFunc()
 }
