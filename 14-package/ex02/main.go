@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	custom.PrintCustom()
+	custom.CustomPrint()
 
 	fmt.Println()
 

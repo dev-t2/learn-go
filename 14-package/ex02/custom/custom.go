@@ -2,6 +2,6 @@ package custom
 
 import "fmt"
 
-func PrintCustom() {
-	fmt.Println("PrintCustom Function")
+func CustomPrint() {
+	fmt.Println("Custom Print Function")
 }
