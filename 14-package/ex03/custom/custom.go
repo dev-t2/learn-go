@@ -26,11 +26,11 @@ type PublicStruct struct {
 	privateField int
 }
 
-func (publicStruct PublicStruct) PublicMethod() {
+func (p PublicStruct) PublicMethod() {
 	fmt.Println("Public Struct - Public Method")
 }
 
-func (publicStruct PublicStruct) privateMethod() {
+func (p PublicStruct) privateMethod() {
 	fmt.Println("Public Struct - Private Method")
 }
 
@@ -39,6 +39,6 @@ type privateStruct struct {
 	privateField int
 }
 
-func (privateStruct privateStruct) privateMethod() {
+func (p privateStruct) privateMethod() {
 	fmt.Println("Private Struct - Private Method")
 }

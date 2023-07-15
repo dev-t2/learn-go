@@ -6,18 +6,18 @@ type account struct {
 	balance int
 }
 
-func (account *account) withdrawPointer(amount int) {
-	account.balance -= amount
+func (a *account) withdrawPointer(amount int) {
+	a.balance -= amount
 }
 
-func (account account) withdrawValue(amount int) {
-	account.balance -= amount
+func (a account) withdrawValue(amount int) {
+	a.balance -= amount
 }
 
-func (account account) withdrawReturnValue(amount int) account {
-	account.balance -= amount
+func (a account) withdrawReturnValue(amount int) account {
+	a.balance -= amount
 
-	return account
+	return a
 }
 
 func main() {

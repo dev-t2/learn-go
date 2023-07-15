@@ -10,8 +10,8 @@ func withdrawFunc(account *account, amount int) {
 	account.balance -= amount
 }
 
-func (account *account) withdrawMethod(amount int) {
-	account.balance -= amount
+func (a *account) withdrawMethod(amount int) {
+	a.balance -= amount
 }
 
 func main() {
