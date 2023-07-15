@@ -4,12 +4,6 @@ import "fmt"
 
 var a = 3
 
-func init() {
-	a++
-
-	fmt.Println("Init Function - a:", a)
-}
-
 func customFunction() int {
 	a++
 
@@ -21,6 +15,12 @@ func customFunction() int {
 var b = customFunction()
 var c = customFunction()
 var d = b + c
+
+func init() {
+	a++
+
+	fmt.Println("Init Function - a:", a)
+}
 
 func CustomPrint() {
 	fmt.Println("Custom Print Function - a:", a)
