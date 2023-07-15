@@ -19,4 +19,6 @@ func main() {
 	var publicStruct = custom.PublicStruct{PublicField: 2}
 
 	fmt.Println("Public Struct:", publicStruct)
+
+	publicStruct.PublicMethod()
 }
