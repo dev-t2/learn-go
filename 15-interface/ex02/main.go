@@ -1,14 +1,29 @@
 package main
 
-import "learn-go/15-interface/ex02/fedex"
+import (
+	"fmt"
+	"learn-go/15-interface/ex02/fedex"
+	"learn-go/15-interface/ex02/post"
+)
 
-func SendBook(name string, sender *fedex.FedexSender) {
+type Sender interface {
+	Send(parser string)
+}
+
+func SendBook(name string, sender Sender) {
 	sender.Send(name)
 }
 
 func main() {
-	var sender = &fedex.FedexSender{}
+	var postSender = &post.PostSender{}
 
-	SendBook("TypeScript", sender)
-	SendBook("Go", sender)
+	SendBook("JavaScript", postSender)
+	SendBook("NodeJS", postSender)
+
+	fmt.Println()
+
+	var fedexSender = &fedex.FedexSender{}
+
+	SendBook("TypeScript", fedexSender)
+	SendBook("Go", fedexSender)
 }
