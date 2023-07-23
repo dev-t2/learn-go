@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func plus(num1 int, num2 int) int {
+func sum(num1 int, num2 int) int {
 	return num1 + num2
 }
 
@@ -14,7 +14,7 @@ func averageScore(math int, english int, history int) {
 }
 
 func main() {
-	var result = plus(1, 2)
+	var result = sum(1, 2)
 
 	fmt.Println(result)
 
