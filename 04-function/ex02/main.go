@@ -4,12 +4,12 @@ import (
 	"fmt"
 )
 
-func Divide1(a, b int) (int, bool) {
-	if b == 0 {
+func Divide1(num1, num2 int) (int, bool) {
+	if num2 == 0 {
 		return 0, false
 	}
 
-	return a / b, true
+	return num1 / num2, true
 }
 
 func Divide2(a, b int) (result int, success bool) {
@@ -17,20 +17,17 @@ func Divide2(a, b int) (result int, success bool) {
 		result = 0
 		success = false
 
+		// return result, success
 		return
 	}
 
 	result = a / b
 	success = true
 
+	// return result, success
 	return
 }
 
-func DeferFunc() {
-	defer fmt.Println("DeferFunc Complete")
-
-	fmt.Println("DeferFunc")
-}
 
 func main() {
 	var result, success = Divide1(9, 3)
@@ -40,6 +37,4 @@ func main() {
 	result, success = Divide2(9, 0)
 
 	fmt.Println(result, success)
-
-	DeferFunc()
 }
