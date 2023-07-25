@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"learn-go/14-package/ex03/custom"
+	"learn-go/13-package/ex03/custom"
 )
 
 func main() {
