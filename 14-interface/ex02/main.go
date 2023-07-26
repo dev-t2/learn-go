@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"learn-go/15-interface/ex02/fedex"
-	"learn-go/15-interface/ex02/post"
+	"learn-go/14-interface/ex02/fedex"
+	"learn-go/14-interface/ex02/post"
 )
 
 type Sender interface {
