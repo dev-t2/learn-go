@@ -30,7 +30,7 @@ func (s *Stack) Pop() interface{} {
 func main() {
 	var stack = CreateStack()
 
-	for i := 0; i < 5; i++ {
+	for i := 1; i < 5; i++ {
 		stack.Push(i)
 	}
 
