@@ -16,7 +16,7 @@ func main() {
 	m[345] = Product{3, "React Native"}
 	m[879] = Product{4, "Go"}
 
-	for index, value := range m {
-		fmt.Println(index, value)
+	for key, value := range m {
+		fmt.Println(key, value)
 	}
 }
