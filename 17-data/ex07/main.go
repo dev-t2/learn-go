@@ -12,6 +12,10 @@ func main() {
 	delete(m, 3)
 	delete(m, 4)
 
-	fmt.Println(m[3])
+	var value1, isExist1 = m[3]
+	var value2, isExist2 = m[4]
+
 	fmt.Println(m[1])
+	fmt.Println(value1, isExist1)
+	fmt.Println(value2, isExist2)
 }
