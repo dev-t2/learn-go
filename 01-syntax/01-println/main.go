@@ -9,6 +9,11 @@ import (
 )
 
 func main() {
+	fmt.Println("Hello, Go!")
+
+	fmt.Println("First Argument", "Second Argument")
+
 	fmt.Println(math.Floor(2.75))
+
 	fmt.Println(cases.Title(language.English).String("go language"))
 }
