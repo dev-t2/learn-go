@@ -6,13 +6,6 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello,\nGo!")
-	fmt.Println("Hello,\tGo!")
-	fmt.Println("Quotes: \"\"")
-	fmt.Println("Backslash: \\")
-
-	fmt.Println()
-
 	fmt.Println('A')
 	fmt.Println('b')
 	fmt.Println('가')
