@@ -14,9 +14,13 @@ func main() {
 	// length, width = 1.2, 3.4
 	// customerName = "Austin"
 
-	var quantity = 4
-	var length, width = 1.2, 3.4
-	var customerName = "Austin"
+	// var quantity = 4
+	// var length, width = 1.2, 3.4
+	// var customerName = "Austin"
+
+	quantity := 4
+	length, width := 1.2, 3.4
+	customerName := "Austin"
 
 	fmt.Println(reflect.TypeOf(quantity))
 	fmt.Println(reflect.TypeOf(length))
