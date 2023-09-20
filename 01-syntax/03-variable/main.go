@@ -11,15 +11,15 @@ func main() {
 	// var customerName string
 
 	// quantity = 4
-	// length, width = 1.2, 3.4
+	// length, width = 1.2, 3.75
 	// customerName = "Austin"
 
 	// var quantity = 4
-	// var length, width = 1.2, 3.4
+	// var length, width = 1.2, 3.75
 	// var customerName = "Austin"
 
 	quantity := 4
-	length, width := 1.2, 3.4
+	length, width := 1.2, 3.75
 	customerName := "Austin"
 
 	fmt.Println(reflect.TypeOf(quantity))
@@ -38,4 +38,19 @@ func main() {
 	fmt.Println(myFloat)
 	fmt.Println(myString)
 	fmt.Println(myBool)
+
+	fmt.Println()
+
+	myInt = 2
+
+	fmt.Println(reflect.TypeOf(myInt))
+	fmt.Println(reflect.TypeOf(float64(myInt)))
+
+	fmt.Println()
+
+	height := 2
+
+	fmt.Println(width * float64(height))
+	fmt.Println(width > float64(height))
+	fmt.Println(int(width))
 }
