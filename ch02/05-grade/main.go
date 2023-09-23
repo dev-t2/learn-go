@@ -26,7 +26,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	status := ""
+	var status string
 
 	if grade >= 60 {
 		status = "Pass"
