@@ -72,4 +72,26 @@ func main() {
 	}
 
 	fmt.Println(x)
+
+	fmt.Println()
+
+	for i := 1; i <= 3; i++ {
+		fmt.Println("before continue")
+
+		continue
+
+		// fmt.Println("after continue")
+	}
+
+	fmt.Println()
+
+	for i := 1; i <= 3; i++ {
+		fmt.Println("before break")
+
+		break
+
+		// fmt.Println("after break")
+	}
+
+	fmt.Println("after loop")
 }

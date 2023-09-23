@@ -1,3 +1,4 @@
+// Grading Program
 package main
 
 import (
