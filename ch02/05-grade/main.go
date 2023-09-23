@@ -1,4 +1,3 @@
-// Grade Program
 package main
 
 import (
@@ -27,5 +26,13 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println(grade)
+	status := ""
+
+	if grade >= 60 {
+		status = "Pass"
+	} else {
+		status = "Fail"
+	}
+
+	fmt.Println(status)
 }
