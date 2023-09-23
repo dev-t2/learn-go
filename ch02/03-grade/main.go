@@ -12,8 +12,10 @@ func main() {
 
 	reader := bufio.NewReader(os.Stdin)
 	input, err := reader.ReadString('\n')
-	
-	log.Fatal(err)
 
+	if err != nil {
+		log.Fatal(err)
+	}
+	
 	fmt.Print(input)
 }
