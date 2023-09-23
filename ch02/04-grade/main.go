@@ -6,6 +6,8 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strconv"
+	"strings"
 )
 
 func main() {
@@ -17,6 +19,13 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	
-	fmt.Print(input)
+
+	input = strings.TrimSpace(input)
+	grade, err := strconv.ParseFloat(input, 64)
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Println(grade)
 }
