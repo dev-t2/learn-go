@@ -70,7 +70,7 @@ func main() {
 
 	fmt.Println()
 
-	for x := 1; x <= 3; x++ {
+	for i := 1; i <= 3; i++ {
 		fmt.Println("before continue")
 
 		continue
@@ -80,7 +80,7 @@ func main() {
 
 	fmt.Println()
 
-	for x := 1; x <= 3; x++ {
+	for i := 1; i <= 3; i++ {
 		fmt.Println("before break")
 
 		break
