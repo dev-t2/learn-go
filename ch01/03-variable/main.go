@@ -8,24 +8,24 @@ import (
 func main() {
 	// var quantity int
 	// var length, width float64
-	// var customerName string
+	// var name string
 
 	// quantity = 4
 	// length, width = 1.2, 3.75
-	// customerName = "Austin"
+	// name = "Go"
 
 	// var quantity = 4
 	// var length, width = 1.2, 3.75
-	// var customerName = "Austin"
+	// var name = "Go"
 
 	quantity := 4
 	length, width := 1.2, 3.75
-	customerName := "Austin"
+	name := "Go"
 
 	fmt.Println(reflect.TypeOf(quantity))
 	fmt.Println(reflect.TypeOf(length))
 	fmt.Println(reflect.TypeOf(width))
-	fmt.Println(reflect.TypeOf(customerName))
+	fmt.Println(reflect.TypeOf(name))
 
 	fmt.Println()
 
@@ -41,16 +41,8 @@ func main() {
 
 	fmt.Println()
 
-	myInt = 2
-
-	fmt.Println(reflect.TypeOf(myInt))
-	fmt.Println(reflect.TypeOf(float64(myInt)))
-
-	fmt.Println()
-
 	height := 2
 
-	fmt.Println(width * float64(height))
-	fmt.Println(width > float64(height))
-	fmt.Println(int(width))
+	fmt.Println(int(width) * height)
+	fmt.Println(int(width) > height)
 }
