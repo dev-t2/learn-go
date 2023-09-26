@@ -1,4 +1,4 @@
-// Guessing Game
+// Guessing Program
 package main
 
 import (
