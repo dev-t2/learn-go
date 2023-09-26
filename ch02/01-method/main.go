@@ -14,7 +14,7 @@ func main() {
 
 	fmt.Println()
 
-	broken := "G# r#cks!"
+	broken := "Hell#, G#!"
 	replacer := strings.NewReplacer("#", "o")
 	fixed := replacer.Replace(broken)
 
