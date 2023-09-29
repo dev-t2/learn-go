@@ -12,10 +12,18 @@ func repeatLine(line string, times int) {
 	}
 }
 
+func getDouble(num float64) float64 {
+	return num * 2
+}
+
 func main() {
 	sayHi()
 
 	fmt.Println()
 
 	repeatLine("hello", 3)
+
+	fmt.Println()
+
+	fmt.Println(getDouble(6.0)) 
 }
