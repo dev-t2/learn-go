@@ -10,8 +10,8 @@ func main() {
 	if false {
 		fmt.Println("false")
 	}
-
-  if 1 == 1 {
+	
+	if 1 == 1 {
 		fmt.Println("1 == 1")
 	}
 
