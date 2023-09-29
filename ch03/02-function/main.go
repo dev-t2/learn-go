@@ -13,6 +13,8 @@ func repeatLine(line string, times int) {
 }
 
 func getDouble(num float64) float64 {
+	// return int(num * 2)
+
 	return num * 2
 }
 
