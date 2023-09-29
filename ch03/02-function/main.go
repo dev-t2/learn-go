@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func sayHi() {
 	fmt.Println("Hi!")
@@ -18,6 +21,12 @@ func getDouble(num float64) float64 {
 	return num * 2
 }
 
+func floatParts(num float64) (integerPart int, floatPart float64) {
+	wholeNumber := math.Floor(num)
+
+	return int(wholeNumber), num - wholeNumber
+}
+
 func main() {
 	sayHi()
 
@@ -28,4 +37,10 @@ func main() {
 	fmt.Println()
 
 	fmt.Println(getDouble(6.0)) 
+
+	fmt.Println()
+
+	integerPart, floatPart := floatParts(1.26)
+	
+	fmt.Println(integerPart, floatPart)
 }
