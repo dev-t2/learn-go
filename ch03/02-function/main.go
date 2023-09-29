@@ -21,6 +21,10 @@ func getDouble(num float64) float64 {
 	return num * 2
 }
 
+func returns() (int, bool, string) {
+	return 1, true, "Go"
+}
+
 func floatParts(num float64) (integerPart int, floatPart float64) {
 	wholeNumber := math.Floor(num)
 
@@ -37,6 +41,12 @@ func main() {
 	fmt.Println()
 
 	fmt.Println(getDouble(6.0)) 
+
+	fmt.Println()
+
+	myInt, myBool, myString := returns()
+
+	fmt.Println(myInt, myBool, myString)
 
 	fmt.Println()
 
