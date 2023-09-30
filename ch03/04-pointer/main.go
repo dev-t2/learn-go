@@ -15,6 +15,10 @@ func printPointer(myBoolPointer *bool) {
 	fmt.Println(*myBoolPointer)
 }
 
+func double(number *int) {
+	*number *= 2
+}
+
 func main() {
 	amount := 6
 
@@ -57,4 +61,10 @@ func main() {
 	myBool := true
 
 	printPointer(&myBool)
+
+	fmt.Println()
+
+	double(&amount)
+
+	fmt.Println(amount)
 }
