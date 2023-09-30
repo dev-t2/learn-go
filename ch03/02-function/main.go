@@ -15,7 +15,7 @@ func repeatLine(line string, times int) {
 	}
 }
 
-func getDouble(num float64) float64 {
+func double(num float64) float64 {
 	// return int(num * 2)
 
 	return num * 2
@@ -40,7 +40,7 @@ func main() {
 
 	fmt.Println()
 
-	fmt.Println(getDouble(6.0)) 
+	fmt.Println(double(6.0)) 
 
 	fmt.Println()
 
