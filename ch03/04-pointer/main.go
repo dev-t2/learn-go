@@ -5,6 +5,16 @@ import (
 	"reflect"
 )
 
+func createPointer() *float64 {
+	myFloat := 98.5
+
+	return &myFloat
+}
+
+func printPointer(myBoolPointer *bool) {
+	fmt.Println(*myBoolPointer)
+}
+
 func main() {
 	amount := 6
 
@@ -35,4 +45,16 @@ func main() {
 	fmt.Println(myIntPointer)
 	fmt.Println(*myIntPointer)
 	fmt.Println(myInt)
+
+	fmt.Println()
+
+	myFloatPointer := createPointer()
+
+	fmt.Println(*myFloatPointer)
+
+	fmt.Println()
+
+	myBool := true
+
+	printPointer(&myBool)
 }
