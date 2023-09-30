@@ -15,8 +15,8 @@ func printPointer(myBoolPointer *bool) {
 	fmt.Println(*myBoolPointer)
 }
 
-func double(number *int) {
-	*number *= 2
+func double(num *int) {
+	*num *= 2
 }
 
 func main() {
