@@ -15,12 +15,6 @@ func repeatLine(line string, times int) {
 	}
 }
 
-func double(num float64) float64 {
-	// return int(num * 2)
-
-	return num * 2
-}
-
 func returns() (int, bool, string) {
 	return 1, true, "Go"
 }
@@ -37,10 +31,6 @@ func main() {
 	fmt.Println()
 
 	repeatLine("hello", 3)
-
-	fmt.Println()
-
-	fmt.Println(double(6.0)) 
 
 	fmt.Println()
 
