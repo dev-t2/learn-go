@@ -13,7 +13,7 @@ func main() {
 
 	fmt.Println()
 
-	var myInt int
+	var myInt int = 4
 
 	fmt.Println(&myInt)
 	fmt.Println(reflect.TypeOf(&myInt))
@@ -26,4 +26,13 @@ func main() {
 	myIntPointer := &myInt
 
 	fmt.Println(myIntPointer)
+	fmt.Println(*myIntPointer)
+
+	fmt.Println()
+
+	*myIntPointer = 8 
+
+	fmt.Println(myIntPointer)
+	fmt.Println(*myIntPointer)
+	fmt.Println(myInt)
 }
