@@ -38,4 +38,10 @@ func main() {
 
 	fmt.Println(notes)
 	fmt.Printf("%#v\n", notes)
+
+	fmt.Println()
+
+	for i := 0; i < len(notes); i++ {
+		fmt.Println(i, notes[i])
+	}
 }
