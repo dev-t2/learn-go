@@ -27,4 +27,16 @@ func main() {
 	for _, note := range notes {
 		fmt.Println(note)
 	}
+
+	notes = []string{
+		"do", 
+		"re", 
+		"mi", 
+		"fa", 
+		"so", 
+		"la", 
+		"ti",
+	}
+
+	fmt.Println(notes[0], notes[3], notes[6])
 }
