@@ -34,5 +34,9 @@ func GetFloats(filename string) ([3]float64, error) {
 		return nums, err
 	}
 
+	if scanner.Err() != nil {
+		return nums, scanner.Err()
+	}
+
 	return nums, nil
 }
