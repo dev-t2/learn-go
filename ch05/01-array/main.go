@@ -9,4 +9,16 @@ func main() {
 	nums[1] = 3
 
 	fmt.Println(nums[0])
+	fmt.Println(nums[2])
+	fmt.Println(nums[4])
+
+	fmt.Println()
+
+	nums[0]++
+	nums[0]++
+	nums[2]++
+
+	fmt.Println(nums[0])
+	fmt.Println(nums[2])
+	fmt.Println(nums[4])
 }
