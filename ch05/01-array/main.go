@@ -47,7 +47,7 @@ func main() {
 
 	fmt.Println()
 
-	for index, note := range notes {
-		fmt.Println(index, note)
+	for _, note := range notes {
+		fmt.Println(note)
 	}
 }
