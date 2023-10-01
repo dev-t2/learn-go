@@ -44,4 +44,10 @@ func main() {
 	for i := 0; i < len(notes); i++ {
 		fmt.Println(i, notes[i])
 	}
+
+	fmt.Println()
+
+	for index, note := range notes {
+		fmt.Println(index, note)
+	}
 }
