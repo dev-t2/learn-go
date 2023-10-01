@@ -25,8 +25,4 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-
-	if scanner.Err() != nil {
-		log.Fatal(scanner.Err())
-	}
 }
