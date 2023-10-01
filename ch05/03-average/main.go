@@ -1,9 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"learn-go/ch05/03-average/datafile"
+	"log"
+)
 
 func main() {
-	nums := [3]float64{71.8, 56.2, 89.5}
+	nums, err := datafile.GetFloats("ch05/03-average/data.txt")
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	sum := 0.0
 
 	for _, num := range nums {
