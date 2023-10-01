@@ -33,4 +33,9 @@ func main() {
 	}
 
 	fmt.Println(notes[0], notes[3], notes[6])
+
+	fmt.Println()
+
+	fmt.Println(notes)
+	fmt.Printf("%#v\n", notes)
 }
