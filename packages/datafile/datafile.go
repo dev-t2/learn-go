@@ -6,8 +6,8 @@ import (
 	"strconv"
 )
 
-func GetFloats(filename string) ([3]float64, error) {
-	var nums [3]float64
+func GetFloats(filename string) ([]float64, error) {
+	var nums []float64
 
 	file, err := os.Open(filename)
 
@@ -15,17 +15,16 @@ func GetFloats(filename string) ([3]float64, error) {
 		return nums, err
 	}
 
-	i := 0
 	scanner := bufio.NewScanner(file)
 
 	for scanner.Scan() {
-		nums[i], err = strconv.ParseFloat(scanner.Text(), 64)
+		num, err := strconv.ParseFloat(scanner.Text(), 64)
 
 		if err != nil {
 			return nums, err
 		}
 
-		i++
+		nums = append(nums, num)
 	}
 
 	err = file.Close()
