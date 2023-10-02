@@ -69,4 +69,12 @@ func main() {
 	value, ok = counter["a"]
 
 	fmt.Println(value, ok)
+
+	fmt.Println()
+
+	counter = map[string]int{"a": 1, "b": 2, "c": 3}
+
+	for key, value := range counter {
+		fmt.Println(key, value)
+	}
 }
