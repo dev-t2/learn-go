@@ -26,7 +26,25 @@ func main() {
 
 	fmt.Println()
 
-	emptyMap := map[string]int{}
+	counter := make(map[string]int)
 
-	fmt.Println(emptyMap)
+	counter["a"]++
+	counter["a"]++
+	counter["c"]++
+
+	fmt.Println(counter["a"], counter["b"], counter["c"])
+
+	fmt.Println()
+
+	var nilMap map[int]string
+
+	fmt.Printf("%#v\n", nilMap)
+
+	// nilMap[3] = "three"
+
+	nilMap = make(map[int]string)
+
+	nilMap[3] = "three"
+
+	fmt.Printf("%#v\n", nilMap)
 }
