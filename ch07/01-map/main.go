@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 func main() {
 	// var ranks map[string]int
@@ -74,7 +77,15 @@ func main() {
 
 	counter = map[string]int{"a": 1, "b": 2, "c": 3}
 
-	for key, value := range counter {
-		fmt.Println(key, value)
+	var keys []string
+
+	for key := range counter {
+		keys = append(keys, key)
+	}
+
+	sort.Strings(keys)
+
+	for _, key := range keys {
+		fmt.Println(key, counter[key])
 	}
 }
