@@ -47,4 +47,18 @@ func main() {
 	nilMap[3] = "three"
 
 	fmt.Printf("%#v\n", nilMap)
+
+	fmt.Println()
+
+	value, ok := counter["a"]
+
+	fmt.Println(value, ok)
+
+	value, ok = counter["b"]
+
+	fmt.Println(value, ok)
+
+	value, ok = counter["c"]
+
+	fmt.Println(value, ok)
 }
