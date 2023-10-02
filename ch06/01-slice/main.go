@@ -43,6 +43,7 @@ func main() {
 	fmt.Println()
 
 	underlyingArray := [5]string{"a", "b", "c", "d", "e"}
+
 	slice1 := underlyingArray[0:3]
 
 	fmt.Println(slice1)
@@ -58,4 +59,16 @@ func main() {
 	slice4 := underlyingArray[1:]
 
 	fmt.Println(slice4)
+
+	fmt.Println()
+
+	underlyingArray[1] = "x"
+
+	fmt.Println(underlyingArray)
+	fmt.Println(slice1)
+
+	slice1[2] = "y" 
+
+	fmt.Println(underlyingArray)
+	fmt.Println(slice1)
 }
