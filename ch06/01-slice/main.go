@@ -39,4 +39,23 @@ func main() {
 	}
 
 	fmt.Println(notes[0], notes[3], notes[6])
+
+	fmt.Println()
+
+	underlyingArray := [5]string{"a", "b", "c", "d", "e"}
+	slice1 := underlyingArray[0:3]
+
+	fmt.Println(slice1)
+
+	slice2 := underlyingArray[2:5]
+
+	fmt.Println(slice2)
+
+	slice3 := underlyingArray[:3]
+
+	fmt.Println(slice3)
+
+	slice4 := underlyingArray[1:]
+
+	fmt.Println(slice4)
 }
