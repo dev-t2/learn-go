@@ -10,4 +10,12 @@ func main() {
 	}
 
 	fmt.Printf("%#v\n", myStruct)
+
+	fmt.Println()
+
+	myStruct.num = 3.14
+	myStruct.word = "pie"
+	myStruct.toggle = true
+
+	fmt.Println(myStruct.num, myStruct.word, myStruct.toggle)
 }
