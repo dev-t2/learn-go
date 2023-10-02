@@ -15,4 +15,18 @@ func main() {
 	fmt.Println(ranks["gold"])
 	fmt.Println(ranks["silver"])
 	fmt.Println(ranks["bronze"])
+
+	fmt.Println()
+
+	ranks = map[string]int{"gold": 4, "silver": 5, "bronze": 6}
+
+	fmt.Println(ranks["gold"])
+	fmt.Println(ranks["silver"])
+	fmt.Println(ranks["bronze"])
+
+	fmt.Println()
+
+	emptyMap := map[string]int{}
+
+	fmt.Println(emptyMap)
 }
