@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"learn-go/ch06/03-average/datafile"
+	"learn-go/packages/datafile"
 	"log"
 )
 
