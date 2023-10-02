@@ -1,21 +1,23 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
-func severalStrings(strings ...string) {
-	fmt.Println(strings)
-}
+func maximum(nums ...float64) float64 {
+	max := math.Inf(-1)
 
-func mix(num int, flag bool, strings ...string) {
-	fmt.Println(num, flag, strings)
+	for _, num := range nums {
+		if num > max {
+			max = num
+		}
+	}
+
+	return max
 }
 
 func main() {
-	severalStrings("a", "b")
-	severalStrings("a", "b", "c", "d", "e")
-	severalStrings()
-
-	fmt.Println()
-
-	mix(1, true, "a", "b")
+	fmt.Println(maximum(71.8, 56.2, 89.5))
+	fmt.Println(maximum(90.7, 89.7, 98.5, 92.3))
 }
