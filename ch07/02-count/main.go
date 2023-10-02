@@ -2,12 +2,12 @@ package main
 
 import (
 	"fmt"
-	"learn-go/packages/datafile"
+	"learn-go/ch07/02-count/datafile"
 	"log"
 )
 
 func main() {
-	lines, err := datafile.GetStrings("ch07/01-count/votes.txt")
+	lines, err := datafile.GetStrings("ch07/02-count/votes.txt")
 
 	if err != nil {
 		log.Fatal(err)
