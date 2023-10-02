@@ -36,4 +36,21 @@ func main() {
 	s1 = append(s1, "s4", "s4")
 
 	fmt.Println(s1)
+
+	fmt.Println()
+
+	floatSlice := make([]float64, 10)
+
+	fmt.Println(floatSlice[9])
+
+	fmt.Println()
+
+	var intSlice []int
+
+	fmt.Printf("intSlice: %#v\n", intSlice)
+	fmt.Println(len(intSlice))
+
+	intSlice = append(intSlice, 27)
+
+	fmt.Printf("intSlice: %#v\n", intSlice)
 }
