@@ -1,4 +1,3 @@
-// Guessing Program
 package main
 
 import (
@@ -13,16 +12,15 @@ import (
 
 func main() {
 	target := rand.Intn(100) + 1
+	isSuccess := false
 
-	fmt.Println("I've chosen a random number between 1 and 100")
+	fmt.Println("\nI've chosen a random number between 1 and 100")
 	fmt.Println("Can you guess it?")
 
 	reader := bufio.NewReader(os.Stdin)
-	isSuccess := false
 
 	for guesses := 0; guesses < 10; guesses++ {
-		fmt.Println()
-		fmt.Println("You have", 10 - guesses, "guesses left")
+		fmt.Println("\nYou have", 10 - guesses, "guesses left")
 		fmt.Print("Make a guess: ")
 
 		input, err := reader.ReadString('\n')
@@ -39,9 +37,9 @@ func main() {
 		}
 	
 		if guess < target {
-			fmt.Println("Your guess was low")
+			fmt.Println("Your guess was LOW")
 		} else if guess > target {
-			fmt.Println("Your guess was high")
+			fmt.Println("Your guess was HIGH")
 		} else {
 			isSuccess = true
 
@@ -52,7 +50,6 @@ func main() {
 	}
 
 	if !isSuccess {
-		fmt.Println()
-		fmt.Println("It was:", target)
+		fmt.Println("\nIt was:", target)
 	}
 }
