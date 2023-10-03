@@ -7,25 +7,6 @@ type car struct {
 	topSpeed float64
 }
 
-type part struct {
-	description string
-	count       int
-}
-
-func showInfo(p part) {
-	fmt.Println("Description:", p.description)
-	fmt.Println("Count:", p.count)
-}
-
-func minimumOrder(description string) part {
-	var p part
-
-	p.description = description
-	p.count = 100
-
-	return p
-}
-
 func main() {
 	var myStruct struct {
 		num    float64
@@ -52,19 +33,4 @@ func main() {
 
 	fmt.Println("Name:", ev6.name)
 	fmt.Println("Top Speed:", ev6.topSpeed)
-
-	fmt.Println()
-
-	var bolts part
-
-	bolts.description = "Bolts"
-	bolts.count = 25
-
-	showInfo(bolts)
-
-	fmt.Println()
-
-	p := minimumOrder("Bolts")
-
-	fmt.Println(p.description, p.count)
 }
