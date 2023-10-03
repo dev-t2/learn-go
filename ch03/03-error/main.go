@@ -47,11 +47,11 @@ func main() {
 
 	fmt.Println()
 
-	root, err := squareRoot(-9.3)
+	result, err = squareRoot(-9.3)
 
 	if err != nil {
 		fmt.Println(err)
 	} else {
-		fmt.Printf("%.3f\n", root)
+		fmt.Printf("%.3f\n", result)
 	}
 }
