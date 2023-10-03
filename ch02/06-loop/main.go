@@ -46,25 +46,23 @@ func main() {
 	fmt.Println()
 
 	for i := 1; i <= 3; i++ {
-		fmt.Println(i)
+		fmt.Println("i:", i)
 
 		j := i + 1
 
-		fmt.Println(j)
+		fmt.Println("j:", j)
 	}
 
-	// fmt.Println(i)
-	// fmt.Println(j)
+	// fmt.Println("i:", i)
+	// fmt.Println("j:", j)
 
 	fmt.Println()
 
-	var x int
-
-	for x = 1; x <= 3; x++ {
-		fmt.Println(x)
+	for i = 1; i <= 3; i++ {
+		fmt.Println(i)
 	}
 
-	fmt.Println(x)
+	fmt.Println(i)
 
 	fmt.Println()
 
