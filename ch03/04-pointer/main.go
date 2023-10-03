@@ -24,15 +24,11 @@ func main() {
 
 	fmt.Println(amount)
 	fmt.Println(&amount)
+	fmt.Println(reflect.TypeOf(&amount))
 
 	fmt.Println()
 
 	var myInt int = 4
-
-	fmt.Println(&myInt)
-	fmt.Println(reflect.TypeOf(&myInt))
-
-	fmt.Println()
 
 	// var myIntPointer *int
 	// myIntPointer = &myInt
@@ -63,6 +59,8 @@ func main() {
 	printPointer(&myBool)
 
 	fmt.Println()
+
+	amount = 3
 
 	double(&amount)
 
