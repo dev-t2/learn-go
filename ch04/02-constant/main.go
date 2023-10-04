@@ -2,12 +2,13 @@ package main
 
 import (
 	"fmt"
-	"learn-go/ch04/02-constant/dates"
 )
+
+const daysInWeek = 7
 
 func main() {
 	days := 3
 
 	fmt.Println(days)
-	fmt.Println(days + dates.DaysInWeek)
+	fmt.Println(days + daysInWeek)
 }
