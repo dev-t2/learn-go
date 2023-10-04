@@ -28,7 +28,7 @@ func main() {
 
 	fmt.Println()
 
-	var myInt int = 4
+	myInt := 4
 
 	// var myIntPointer *int
 	// myIntPointer = &myInt
