@@ -27,6 +27,20 @@ func main() {
 
 	fmt.Println()
 
+	for i := 1; i <= 3; i++ {
+		fmt.Println("i:", i)
+
+		j := i + 1
+
+		fmt.Println("j:", j)
+	}
+
+	// fmt.Println("i:", i)
+	// fmt.Println("j:", j)
+
+
+	fmt.Println()
+
 	i := 1
 
 	for i <= 3 {
@@ -42,19 +56,6 @@ func main() {
 
 		i--
 	}
-
-	fmt.Println()
-
-	for i := 1; i <= 3; i++ {
-		fmt.Println("i:", i)
-
-		j := i + 1
-
-		fmt.Println("j:", j)
-	}
-
-	// fmt.Println("i:", i)
-	// fmt.Println("j:", j)
 
 	fmt.Println()
 
