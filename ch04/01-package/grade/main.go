@@ -7,8 +7,6 @@ import (
 	"log"
 )
 
-
-
 func main() {
 	fmt.Print("Enter a grade: ")
 
