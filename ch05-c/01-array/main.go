@@ -10,8 +10,6 @@ func main() {
 
 	fmt.Println(nums[0], nums[2], nums[4])
 
-	fmt.Println()
-
 	nums[0]++
 	nums[0]++
 	nums[2]++
@@ -23,9 +21,6 @@ func main() {
 	notes := [7]string{"do", "re", "mi", "fa", "so", "la", "ti"}
 
 	fmt.Println(notes[0], notes[3], notes[6])
-
-	fmt.Println()
-
 	fmt.Println(notes)
 	fmt.Printf("%#v\n", notes)
 
