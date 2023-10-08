@@ -3,7 +3,7 @@ package main
 
 import (
 	"fmt"
-	"learn-go/packages/keyboard"
+	"learn-go/ch04-c/packages/keyboard"
 	"log"
 )
 
