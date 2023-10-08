@@ -20,15 +20,13 @@ func double(num *int) {
 }
 
 func main() {
-	amount := 6
+	myInt := 4
 
-	fmt.Println(amount)
-	fmt.Println(&amount)
-	fmt.Println(reflect.TypeOf(&amount))
+	fmt.Println(myInt)
+	fmt.Println(&myInt)
+	fmt.Println(reflect.TypeOf(&myInt))
 
 	fmt.Println()
-
-	myInt := 4
 
 	// var myIntPointer *int
 	// myIntPointer = &myInt
@@ -60,7 +58,7 @@ func main() {
 
 	fmt.Println()
 
-	amount = 3
+	amount := 3
 
 	double(&amount)
 
