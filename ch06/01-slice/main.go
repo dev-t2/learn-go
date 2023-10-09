@@ -9,14 +9,16 @@ func main() {
 	notes := make([]string, 7)
 
 	notes[0] = "do"
-	notes[1] = "re"
-	notes[2] = "mi"
+	notes[3] = "fa"
+	notes[6] = "ti"
 
-	fmt.Println(notes[0], notes[1], notes[2])
+	fmt.Println(notes[0], notes[3], notes[6])
 
 	fmt.Println()
 
-	fmt.Println(len(notes))
+	notes = []string{"do", "re", "mi", "fa", "so", "la", "ti"}
+
+	fmt.Println(notes[0], notes[3], notes[6])
 
 	fmt.Println()
 
@@ -24,21 +26,11 @@ func main() {
 		fmt.Println(notes[i])
 	}
 
+	fmt.Println()
+
 	for _, note := range notes {
 		fmt.Println(note)
 	}
-
-	notes = []string{
-		"do", 
-		"re", 
-		"mi", 
-		"fa", 
-		"so", 
-		"la", 
-		"ti",
-	}
-
-	fmt.Println(notes[0], notes[3], notes[6])
 
 	fmt.Println()
 
@@ -66,9 +58,17 @@ func main() {
 
 	fmt.Println(underlyingArray)
 	fmt.Println(slice1)
+	fmt.Println(slice2)
+	fmt.Println(slice3)
+	fmt.Println(slice4)
+
+	fmt.Println()
 
 	slice1[2] = "y" 
 
 	fmt.Println(underlyingArray)
 	fmt.Println(slice1)
+	fmt.Println(slice2)
+	fmt.Println(slice3)
+	fmt.Println(slice4)
 }
