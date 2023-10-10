@@ -3,22 +3,29 @@ package main
 import "fmt"
 
 func main() {
-	// var notes []string
-	// notes = make([]string, 7)
+	// var nums []int
+	// nums = make([]int, 5)
 
-	notes := make([]string, 7)
+	nums := make([]int, 5)
 
-	notes[0] = "do"
-	notes[3] = "fa"
-	notes[6] = "ti"
+	nums[2] = 2
+	nums[4] = 4
 
-	fmt.Println(notes[0], notes[3], notes[6])
+	fmt.Println(nums[0], nums[2], nums[4])
+
+	nums[0]++
+	nums[0]++
+	nums[2]++
+
+	fmt.Println(nums[0], nums[2], nums[4])
 
 	fmt.Println()
 
-	notes = []string{"do", "re", "mi", "fa", "so", "la", "ti"}
+	notes := []string{"do", "re", "mi", "fa", "so", "la", "ti"}
 
 	fmt.Println(notes[0], notes[3], notes[6])
+	fmt.Println(notes)
+	fmt.Printf("%#v\n", notes)
 
 	fmt.Println()
 
@@ -34,29 +41,29 @@ func main() {
 
 	fmt.Println()
 
-	underlyingArray := [5]string{"a", "b", "c", "d", "e"}
+	array := [5]string{"a", "b", "c", "d", "e"}
 
-	slice1 := underlyingArray[0:3]
+	slice1 := array[0:3]
 
 	fmt.Println(slice1)
 
-	slice2 := underlyingArray[2:5]
+	slice2 := array[2:5]
 
 	fmt.Println(slice2)
 
-	slice3 := underlyingArray[:3]
+	slice3 := array[:3]
 
 	fmt.Println(slice3)
 
-	slice4 := underlyingArray[1:]
+	slice4 := array[1:]
 
 	fmt.Println(slice4)
 
 	fmt.Println()
 
-	underlyingArray[1] = "x"
+	array[1] = "x"
 
-	fmt.Println(underlyingArray)
+	fmt.Println(array)
 	fmt.Println(slice1)
 	fmt.Println(slice2)
 	fmt.Println(slice3)
@@ -66,7 +73,7 @@ func main() {
 
 	slice1[2] = "y" 
 
-	fmt.Println(underlyingArray)
+	fmt.Println(array)
 	fmt.Println(slice1)
 	fmt.Println(slice2)
 	fmt.Println(slice3)
