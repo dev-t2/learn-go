@@ -15,17 +15,11 @@ func main() {
 	ranks["silver"] = 2
 	ranks["bronze"] = 3
 
-	fmt.Println(ranks["gold"])
-	fmt.Println(ranks["silver"])
-	fmt.Println(ranks["bronze"])
-
-	fmt.Println()
+	fmt.Println(ranks["gold"], ranks["silver"], ranks["bronze"])
 
 	ranks = map[string]int{"gold": 4, "silver": 5, "bronze": 6}
 
-	fmt.Println(ranks["gold"])
-	fmt.Println(ranks["silver"])
-	fmt.Println(ranks["bronze"])
+	fmt.Println(ranks["gold"], ranks["silver"], ranks["bronze"])
 
 	fmt.Println()
 
@@ -36,20 +30,6 @@ func main() {
 	counter["c"]++
 
 	fmt.Println(counter["a"], counter["b"], counter["c"])
-
-	fmt.Println()
-
-	var nilMap map[int]string
-
-	fmt.Printf("%#v\n", nilMap)
-
-	// nilMap[3] = "three"
-
-	nilMap = make(map[int]string)
-
-	nilMap[3] = "three"
-
-	fmt.Printf("%#v\n", nilMap)
 
 	fmt.Println()
 
@@ -65,8 +45,6 @@ func main() {
 
 	fmt.Println(value, ok)
 
-	fmt.Println()
-
 	delete(counter, "a")
 
 	value, ok = counter["a"]
@@ -79,13 +57,35 @@ func main() {
 
 	var keys []string
 
-	for key := range counter {
+	for key, value := range counter {
+		fmt.Println(key, value)
+
 		keys = append(keys, key)
 	}
+
+	fmt.Println()
 
 	sort.Strings(keys)
 
 	for _, key := range keys {
 		fmt.Println(key, counter[key])
 	}
+
+	fmt.Println()
+
+	var nilMap map[int]string
+
+	fmt.Printf("%#v\n", nilMap)
+	fmt.Println(nilMap == nil)
+
+	// nilMap[3] = "three"
+
+	fmt.Println()
+
+	nilMap = make(map[int]string)
+
+	nilMap[3] = "three"
+
+	fmt.Printf("%#v\n", nilMap)
+	fmt.Println(nilMap == nil)
 }
