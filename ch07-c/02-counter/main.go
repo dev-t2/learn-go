@@ -38,7 +38,7 @@ func getStrings(filename string) ([]string, error) {
 }
 
 func main() {
-	lines, err := getStrings("ch07/02-counter/votes.txt")
+	lines, err := getStrings("ch07-c/02-counter/votes.txt")
 
 	if err != nil {
 		log.Fatal(err)
