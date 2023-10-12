@@ -4,7 +4,7 @@ import "fmt"
 
 type car struct {
 	name     string
-	topSpeed float64
+	topSpeed int
 }
 
 func main() {
@@ -15,8 +15,6 @@ func main() {
 	}
 
 	fmt.Printf("%#v\n", myStruct)
-
-	fmt.Println()
 
 	myStruct.num = 3.14
 	myStruct.word = "pie"
