@@ -7,6 +7,16 @@ type car struct {
 	topSpeed int
 }
 
+type part struct {
+	description string
+	count 			int
+}
+
+func showInfo(p part) {
+	fmt.Println("Description:", p.description)
+	fmt.Println("Count:", p.count)
+}
+
 func main() {
 	var myStruct struct {
 		number float64
@@ -31,4 +41,13 @@ func main() {
 
 	fmt.Println("Name:", porsche.name)
 	fmt.Println("Top Speed:", porsche.topSpeed)
+
+	fmt.Println()
+
+	var bolts part
+
+	bolts.description = "Hex Bolts"
+	bolts.count = 24
+
+	showInfo(bolts)
 }
