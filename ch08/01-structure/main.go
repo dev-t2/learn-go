@@ -12,6 +12,15 @@ type part struct {
 	count 			int
 }
 
+func minimumOrder(description string) part {
+	var p part
+
+	p.description = description
+	p.count = 100
+
+	return p
+}
+
 func showInfo(p part) {
 	fmt.Println("Description:", p.description)
 	fmt.Println("Count:", p.count)
@@ -44,10 +53,7 @@ func main() {
 
 	fmt.Println()
 
-	var bolts part
-
-	bolts.description = "Hex Bolts"
-	bolts.count = 24
+	bolts := minimumOrder("Hex Bolts")
 
 	showInfo(bolts)
 }
