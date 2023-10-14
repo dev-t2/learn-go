@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	var subscriber struct {
 		name     string
-		rate     float64
+		rate     int
 		isActive bool
 	}
 
