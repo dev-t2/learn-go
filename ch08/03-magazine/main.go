@@ -5,34 +5,18 @@ import (
 	"learn-go/ch08/packages/magazine"
 )
 
-func defaultSubscriber(name string) *magazine.Subscriber {
-	s := magazine.Subscriber{Name: name, Rate: 9900, IsActive: true}
-
-	return &s
-}
-
-func applyDiscount(s *magazine.Subscriber) {
-	s.Rate = 4900
-}
-
-func printInfo(s *magazine.Subscriber) {
-	fmt.Println("Name:", s.Name)
-	fmt.Println("Monthly Rate:", s.Rate)
-	fmt.Println("Active:", s.IsActive)
-}
-
 func main() {
-	subscriber1 := defaultSubscriber("Austin")
+	subscriber1 := magazine.DefaultSubscriber("Austin")
 	
-	applyDiscount(subscriber1)
+	magazine.ApplyDiscount(subscriber1)
 	
-	printInfo(subscriber1)
+	magazine.PrintInfo(subscriber1)
 
 	fmt.Println()
 
-	subscriber2 := defaultSubscriber("Alice")
+	subscriber2 := magazine.DefaultSubscriber("Alice")
 
-	printInfo(subscriber2)
+	magazine.PrintInfo(subscriber2)
 
 	fmt.Println()
 
