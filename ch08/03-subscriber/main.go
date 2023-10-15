@@ -8,17 +8,21 @@ type subscriber struct {
 	isActive bool
 }
 
-func defaultSubscriber(name string) subscriber {
+func defaultSubscriber(name string) *subscriber {
 	var s subscriber
 
 	s.name = name
 	s.rate = 9900
 	s.isActive = true
 
-	return s
+	return &s
 }
 
-func printInfo(s subscriber) {
+func applyDiscount(s *subscriber) {
+	s.rate = 4900
+}
+
+func printInfo(s *subscriber) {
 	fmt.Println("Name:", s.name)
 	fmt.Println("Monthly Rate:", s.rate)
 	fmt.Println("Active:", s.isActive)
@@ -27,8 +31,8 @@ func printInfo(s subscriber) {
 func main() {
 	subscriber1 := defaultSubscriber("Austin")
 	
-	subscriber1.rate = 19900
-
+	applyDiscount(subscriber1)
+	
 	printInfo(subscriber1)
 
 	fmt.Println()
