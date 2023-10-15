@@ -6,11 +6,7 @@ import (
 )
 
 func defaultSubscriber(name string) *magazine.Subscriber {
-	var s magazine.Subscriber
-
-	s.Name = name
-	s.Rate = 9900
-	s.IsActive = true
+	s := magazine.Subscriber{Name: name, Rate: 9900, IsActive: true}
 
 	return &s
 }
