@@ -23,7 +23,7 @@ func main() {
 	subscriber := magazine.Subscriber{Name: "Cloyee"}
 	address := magazine.Address{Street: "Street", City: "City", State: "State"}
 	
-	subscriber.HomeAddress = address
+	subscriber.Address = address
 
 	fmt.Printf("%#v\n", subscriber)
 
@@ -31,9 +31,9 @@ func main() {
 
 	employee := magazine.Employee{Name: "Sally", Salary: 5000}
 
-	employee.HomeAddress.State = "Street"
-	employee.HomeAddress.City = "City"
-	employee.HomeAddress.State = "State"
+	employee.Address.State = "Street"
+	employee.Address.City = "City"
+	employee.Address.State = "State"
 
 	fmt.Printf("%#v\n", employee)
 }
