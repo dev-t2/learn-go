@@ -9,24 +9,17 @@ type Address struct {
 	PostalCode string
 }
 
-// type Subscriber struct {
-// 	Name        string
-// 	Rate        int
-// 	IsActive    bool
-// 	HomeAddress Address
-// }
-
 type Subscriber struct {
 	Name        string
 	Rate        int
 	IsActive    bool
-	Address Address
+	HomeAddress Address
 }
 
 type Employee struct {
 	Name        string
 	Salary      int
-	Address Address
+	Address
 }
 
 func DefaultSubscriber(name string) *Subscriber {
