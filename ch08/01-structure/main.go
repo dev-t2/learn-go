@@ -3,13 +3,13 @@ package main
 import "fmt"
 
 type car struct {
-	name 		 string
+	name     string
 	topSpeed int
 }
 
 type part struct {
 	description string
-	count 			int
+	count       int
 }
 
 func minimumOrder(description string) part {
@@ -34,11 +34,15 @@ func main() {
 	}
 
 	fmt.Printf("%#v\n", myStruct)
+	fmt.Println(myStruct.number, myStruct.word, myStruct.toggle)
+
+	fmt.Println()
 
 	myStruct.number = 3.14
 	myStruct.word = "pie"
 	myStruct.toggle = true
 
+	fmt.Printf("%#v\n", myStruct)
 	fmt.Println(myStruct.number, myStruct.word, myStruct.toggle)
 
 	fmt.Println()
