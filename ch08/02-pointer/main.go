@@ -22,12 +22,14 @@ func main() {
 
 	fmt.Println((*pointer2).myField)
 	fmt.Println(pointer2.myField)
+
+	fmt.Println()
 	
 	(*pointer2).myField = 6
 
 	fmt.Println(pointer2.myField)
 
-	pointer2.myField = 6
+	pointer2.myField = 9
 
 	fmt.Println(pointer2.myField)
 }
