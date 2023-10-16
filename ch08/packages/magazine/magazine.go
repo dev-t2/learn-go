@@ -28,12 +28,12 @@ func DefaultSubscriber(name string) *Subscriber {
 	return &s
 }
 
-func ApplyDiscount(s *Subscriber) {
-	s.Rate = 4900
-}
-
 func PrintInfo(s *Subscriber) {
 	fmt.Println("Name:", s.Name)
 	fmt.Println("Monthly Rate:", s.Rate)
 	fmt.Println("Active:", s.IsActive)
+}
+
+func ApplyDiscount(s *Subscriber) {
+	s.Rate = 4900
 }

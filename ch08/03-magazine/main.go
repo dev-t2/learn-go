@@ -8,13 +8,13 @@ import (
 func main() {
 	subscriber1 := magazine.DefaultSubscriber("Austin")
 	
-	magazine.ApplyDiscount(subscriber1)
-	
 	magazine.PrintInfo(subscriber1)
 
 	fmt.Println()
 
 	subscriber2 := magazine.DefaultSubscriber("Alice")
+
+	magazine.ApplyDiscount(subscriber2)
 
 	magazine.PrintInfo(subscriber2)
 
