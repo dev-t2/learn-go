@@ -21,6 +21,5 @@ func main() {
 	carFuel += toGallons(Liters(40.0))
 	busFuel += toLiters(Gallons(30.0))
 
-	fmt.Printf("Car Fuel: %0.1f Gallons\n", carFuel)
-	fmt.Printf("Bus Fuel: %0.1f Liters\n", busFuel)
+	fmt.Printf("Gallons: %.1f, Liters: %.1f\n", carFuel, busFuel)
 }
