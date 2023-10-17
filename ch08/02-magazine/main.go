@@ -20,7 +20,7 @@ func main() {
 
 	fmt.Println()
 
-	subscriber := magazine.Subscriber{Name: "Cloyee"}
+	subscriber := magazine.Subscriber{Name: "Chloe"}
 	address := magazine.Address{Street: "Street", City: "City", State: "State"}
 	
 	subscriber.HomeAddress = address

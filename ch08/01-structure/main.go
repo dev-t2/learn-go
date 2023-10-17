@@ -12,6 +12,10 @@ type part struct {
 	count       int
 }
 
+type myStruct2 struct {
+	myField int
+}
+
 func minimumOrder(description string) part {
 	var p part
 
@@ -27,23 +31,23 @@ func showInfo(p part) {
 }
 
 func main() {
-	var myStruct struct {
+	var myStruct1 struct {
 		number float64
 		word   string
 		toggle bool
 	}
 
-	fmt.Printf("%#v\n", myStruct)
-	fmt.Println(myStruct.number, myStruct.word, myStruct.toggle)
+	fmt.Printf("%#v\n", myStruct1)
+	fmt.Println(myStruct1.number, myStruct1.word, myStruct1.toggle)
 
 	fmt.Println()
 
-	myStruct.number = 3.14
-	myStruct.word = "pie"
-	myStruct.toggle = true
+	myStruct1.number = 3.14
+	myStruct1.word = "pie"
+	myStruct1.toggle = true
 
-	fmt.Printf("%#v\n", myStruct)
-	fmt.Println(myStruct.number, myStruct.word, myStruct.toggle)
+	fmt.Printf("%#v\n", myStruct1)
+	fmt.Println(myStruct1.number, myStruct1.word, myStruct1.toggle)
 
 	fmt.Println()
 
@@ -60,4 +64,32 @@ func main() {
 	bolts := minimumOrder("Hex Bolts")
 
 	showInfo(bolts)
+
+	fmt.Println()
+
+	value1 := 2
+	pointer1 := &value1
+
+	fmt.Println(pointer1)
+	fmt.Println(*pointer1)
+
+	fmt.Println()
+
+	var value2 myStruct2
+
+	value2.myField = 3
+	pointer2 := &value2
+
+	fmt.Println((*pointer2).myField)
+	fmt.Println(pointer2.myField)
+
+	fmt.Println()
+	
+	(*pointer2).myField = 6
+
+	fmt.Println(pointer2.myField)
+
+	pointer2.myField = 9
+
+	fmt.Println(pointer2.myField)
 }
