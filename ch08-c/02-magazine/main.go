@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"learn-go/ch08/packages/magazine"
+	"learn-go/ch08-c/packages/magazine"
 )
 
 func main() {
