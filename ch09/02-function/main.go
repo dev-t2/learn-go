@@ -16,19 +16,19 @@ func toLiters(g Gallons) Liters {
 	return Liters(g * 3.785)
 }
 
-func LiterstoGallons(l Liters) Gallons {
+func LitersToGallons(l Liters) Gallons {
 	return Gallons(l * 0.264)
 }
 
-func MilliliterstoGallons(m Milliliters) Gallons {
+func MillilitersToGallons(m Milliliters) Gallons {
 	return Gallons(m * 0.000264)
 }
 
-func GallonstoLiters(g Gallons) Liters {
+func GallonsToLiters(g Gallons) Liters {
 	return Liters(g * 3.785)
 }
 
-func GallonstoMilliliters(g Gallons) Milliliters {
+func GallonsToMilliliters(g Gallons) Milliliters {
 	return Milliliters(g * 3785.41)
 }
 
