@@ -2,31 +2,17 @@ package main
 
 import "fmt"
 
+type Title string
+
 type Gallons float64
 
 type Liters float64
 
-type Title string
-
 func main() {
-	carFuel := Gallons(10.0)
-	busFuel := Liters(240.0)
-
-	fmt.Printf("Gallons: %.1f, Liters: %.1f\n", carFuel, busFuel)
-
-	fmt.Println()
-
-	carFuel = Gallons(Liters(40.0))
-	busFuel = Liters(Gallons(63.0))
-
-	fmt.Printf("Gallons: %.1f, Liters: %.1f\n", carFuel, busFuel)
-
-	fmt.Println()
-
-	carFuel = Gallons(Liters(40.0) * 0.264)
-	busFuel = Liters(Gallons(63.0) * 3.785)
-
-	fmt.Printf("Gallons: %.1f, Liters: %.1f\n", carFuel, busFuel)
+	fmt.Println(Title("ATitle") == Title("ATitle"))
+	fmt.Println(Title("ATitle") < Title("ZTitle"))
+	fmt.Println(Title("ATitle") > Title("ZTitle"))
+	fmt.Println(Title("ATitle") + "s")
 
 	fmt.Println()
 
@@ -46,8 +32,22 @@ func main() {
 
 	fmt.Println()
 
-	fmt.Println(Title("ATitle") == Title("ATitle"))
-	fmt.Println(Title("ATitle") < Title("ZTitle"))
-	fmt.Println(Title("ATitle") > Title("ZTitle"))
-	fmt.Println(Title("ATitle") + "s")
+	carFuel := Gallons(10.0)
+	busFuel := Liters(240.0)
+
+	fmt.Printf("Gallons: %.1f, Liters: %.1f\n", carFuel, busFuel)
+
+	fmt.Println()
+
+	carFuel = Gallons(Liters(40.0))
+	busFuel = Liters(Gallons(63.0))
+
+	fmt.Printf("Gallons: %.1f, Liters: %.1f\n", carFuel, busFuel)
+
+	fmt.Println()
+
+	carFuel = Gallons(Liters(40.0) * 0.264)
+	busFuel = Liters(Gallons(63.0) * 3.785)
+
+	fmt.Printf("Gallons: %.1f, Liters: %.1f\n", carFuel, busFuel)
 }
