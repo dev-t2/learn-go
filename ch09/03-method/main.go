@@ -49,7 +49,7 @@ func main() {
 
 	fmt.Println()
 
-	value3 := MyType("Value 3")
+	value3 := MyType("Value3")
 
 	value3.method()
 	(&value3).pointerMethod()
@@ -62,6 +62,10 @@ func main() {
 	(*pointer).method()
 	pointer.method()
 	pointer.pointerMethod()
+
+	// &MyType("Value4")
+	// MyType("Value4").method()
+	// MyType("Value4").pointerMethod()
 
 	fmt.Println()
 
