@@ -8,8 +8,8 @@ func (m MyType) sayHi() {
 	fmt.Println(m)
 }
 
-func (m MyType) MethodWithParameters(num int, flag bool) {
-	fmt.Println(m, num, flag)
+func (m MyType) MethodWithParameters(num int) {
+	fmt.Println(m, num)
 }
 
 func (m MyType) WithReturn() int {
@@ -21,16 +21,15 @@ func (m MyType) ExportedMethod() {}
 func (m MyType) unexportedMethod() {}
 
 func main() {
-	value := MyType("Value")
+	value1 := MyType("Value1")
 
-	value.sayHi()
-
-	anotherValue := MyType("Another Value")
-
-	anotherValue.sayHi()
+	value1.sayHi()
 
 	fmt.Println()
 
-	value.MethodWithParameters(4, true)
-	fmt.Println(value.WithReturn())
+	value2 := MyType("Value2")
+
+	value2.MethodWithParameters(4)
+
+	fmt.Println(value2.WithReturn())
 }
