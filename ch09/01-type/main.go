@@ -9,26 +9,39 @@ type Gallons float64
 type Liters float64
 
 func main() {
-	fmt.Println(Title("ATitle") == Title("ATitle"))
-	fmt.Println(Title("ATitle") < Title("ZTitle"))
-	fmt.Println(Title("ATitle") > Title("ZTitle"))
-	fmt.Println(Title("ATitle") + "s")
+	aTitle := Title("ATitle")
+	bTitle := Title("ZTitle")
+
+	fmt.Println(aTitle == aTitle)
+	fmt.Println(aTitle < bTitle)
+	fmt.Println(aTitle > bTitle)
 
 	fmt.Println()
 
-	fmt.Println(Liters(1.2) + Liters(3.4))
-	fmt.Println(Gallons(5.5) - Gallons(2.2))
-	fmt.Println(Liters(2.2) / Liters(1.1))
-	fmt.Println(Gallons(1.2) == Gallons(1.2))
-	fmt.Println(Liters(1.2) < Liters(3.4))
-	fmt.Println(Gallons(1.2) > Gallons(3.4))
+	fmt.Println(aTitle + "s")
 
 	fmt.Println()
-	
-	fmt.Println(Liters(1.2) + 3.4)
-	fmt.Println(Gallons(5.5) - 2.2)
-	fmt.Println(Liters(1.2) == 1.2)
-	fmt.Println(Gallons(1.2) < 3.4)
+
+	aLiters := Liters(1.2)
+	bLiters := Liters(3.6)
+	aGallons := Gallons(1.2)
+	bGallons := Gallons(3.4)
+
+	fmt.Println(aLiters + bLiters)
+	fmt.Println(bGallons - aGallons)
+	fmt.Println(bLiters / aLiters)
+	fmt.Println(aGallons == aGallons)
+	fmt.Println(aLiters < bLiters)
+	fmt.Println(aGallons > bGallons)
+
+	fmt.Println()
+
+	fmt.Println(aLiters + 3.6)
+	fmt.Println(bGallons - 1.2)
+	fmt.Println(bLiters / 1.2)
+	fmt.Println(aGallons == 1.2)
+	fmt.Println(aLiters < 3.6)
+	fmt.Println(aGallons > 3.4)
 
 	fmt.Println()
 
