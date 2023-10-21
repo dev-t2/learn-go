@@ -39,25 +39,21 @@ func main() {
 
 	value1.sayHi()
 
+	value1.MethodWithParameters(4)
+
+	fmt.Println(value1.WithReturn())
+
 	fmt.Println()
 
 	value2 := MyType("Value2")
 
-	value2.MethodWithParameters(4)
-
-	fmt.Println(value2.WithReturn())
-
-	fmt.Println()
-
-	value3 := MyType("Value3")
-
-	value3.method()
-	(&value3).pointerMethod()
-	value3.pointerMethod()
+	value2.method()
+	(&value2).pointerMethod()
+	value2.pointerMethod()
 
 	fmt.Println()
 
-	pointer := &value3
+	pointer := &value2
 
 	(*pointer).method()
 	pointer.method()

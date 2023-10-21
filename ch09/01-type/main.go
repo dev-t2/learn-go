@@ -8,6 +8,32 @@ type Gallons float64
 
 type Liters float64
 
+type Milliliters float64
+
+func toGallons(l Liters) Gallons {
+	return Gallons(l * 0.264)
+}
+
+func toLiters(g Gallons) Liters {
+	return Liters(g * 3.785)
+}
+
+func LitersToGallons(l Liters) Gallons {
+	return Gallons(l * 0.264)
+}
+
+func MillilitersToGallons(m Milliliters) Gallons {
+	return Gallons(m * 0.000264)
+}
+
+func GallonsToLiters(g Gallons) Liters {
+	return Liters(g * 3.785)
+}
+
+func GallonsToMilliliters(g Gallons) Milliliters {
+	return Milliliters(g * 3785.41)
+}
+
 func main() {
 	aTitle := Title("ATitle")
 	bTitle := Title("ZTitle")
@@ -45,8 +71,8 @@ func main() {
 
 	fmt.Println()
 
-	carFuel := Gallons(10.0)
-	busFuel := Liters(240.0)
+	carFuel := Gallons(10.6)
+	busFuel := Liters(238.5)
 
 	fmt.Printf("Gallons: %.1f, Liters: %.1f\n", carFuel, busFuel)
 
@@ -57,6 +83,11 @@ func main() {
 
 	carFuel = Gallons(Liters(40.0) * 0.264)
 	busFuel = Liters(Gallons(63.0) * 3.785)
+
+	fmt.Printf("Gallons: %.1f, Liters: %.1f\n", carFuel, busFuel)
+
+	carFuel = toGallons(Liters(40.0))
+	busFuel = toLiters(Gallons(63.0))
 
 	fmt.Printf("Gallons: %.1f, Liters: %.1f\n", carFuel, busFuel)
 }
