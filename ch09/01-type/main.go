@@ -27,11 +27,11 @@ func MillilitersToGallons(m Milliliters) Gallons {
 }
 
 func GallonsToLiters(g Gallons) Liters {
-	return Liters(g * 3.785)
+	return Liters(g * 3.787879)
 }
 
 func GallonsToMilliliters(g Gallons) Milliliters {
-	return Milliliters(g * 3785.41)
+	return Milliliters(g * 3787.879)
 }
 
 func main() {
