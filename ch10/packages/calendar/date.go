@@ -3,9 +3,9 @@ package calendar
 import "errors"
 
 type Date struct {
-	Year  int
-	Month int
-	Day   int
+	year  int
+	month int
+	day   int
 }
 
 func (d *Date) SetYear(year int) error {
@@ -13,7 +13,7 @@ func (d *Date) SetYear(year int) error {
 		return errors.New("Invalid Year")
 	}
 
-	d.Year = year
+	d.year = year
 
 	return nil
 }
@@ -23,7 +23,7 @@ func (d *Date) SetMonth(month int) error {
 		return errors.New("Invalid Month")
 	}
 
-	d.Month = month
+	d.month = month
 
 	return nil
 }
@@ -33,7 +33,7 @@ func (d *Date) SetDay(day int) error {
 		return errors.New("Invalid Day")
 	}
 
-	d.Day = day
+	d.day = day
 
 	return nil
 }
