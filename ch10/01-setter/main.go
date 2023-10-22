@@ -24,11 +24,15 @@ func main() {
 		log.Fatal(err)
 	}
 
+	fmt.Println(date.Year())
+
 	err = date.SetMonth(10)
 
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	fmt.Println(date.Month())
 
 	err = date.SetDay(22)
 
@@ -36,5 +40,5 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println(date)
+	fmt.Println(date.Day())
 }
