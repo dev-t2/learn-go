@@ -28,12 +28,6 @@ func (m *MyType) pointerMethod() {
 	fmt.Println("Method with pointer receiver")
 }
 
-type Number int
-
-func (n *Number) double() {
-	*n *= 2
-}
-
 type Gallons float64
 
 type Liters float64
@@ -84,16 +78,6 @@ func main() {
 	// &MyType("Value4")
 	// MyType("Value4").method()
 	// MyType("Value4").pointerMethod()
-
-	fmt.Println()
-
-	num := Number(4)
-	
-	fmt.Println(num)
-
-	num.double()
-
-	fmt.Println(num)
 
 	fmt.Println()
 
