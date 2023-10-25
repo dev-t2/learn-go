@@ -18,7 +18,9 @@ func main() {
 
 	date := calendar.Date{}
 
-	err := date.SetYear(2023)
+	fmt.Println(date.Year())
+
+	err := date.SetYear(1989)
 
 	if err != nil {
 		log.Fatal(err)
@@ -26,7 +28,11 @@ func main() {
 
 	fmt.Println(date.Year())
 
-	err = date.SetMonth(10)
+	fmt.Println()
+
+	fmt.Println(date.Month())
+
+	err = date.SetMonth(4)
 
 	if err != nil {
 		log.Fatal(err)
@@ -34,7 +40,11 @@ func main() {
 
 	fmt.Println(date.Month())
 
-	err = date.SetDay(22)
+	fmt.Println()
+
+	fmt.Println(date.Day())
+
+	err = date.SetDay(1)
 
 	if err != nil {
 		log.Fatal(err)
