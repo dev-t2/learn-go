@@ -51,33 +51,31 @@ func (g Gallons) toMilliliters() Milliliters {
 }
 
 func main() {
-	value1 := MyType("Value1")
+	value := MyType("Value")
 
-	value1.sayHi()
+	value.sayHi()
 
-	value1.MethodWithParameters(4)
+	value.MethodWithParameters(5)
 
-	fmt.Println(value1.WithReturn())
-
-	fmt.Println()
-
-	value2 := MyType("Value2")
-
-	value2.method()
-	(&value2).pointerMethod()
-	value2.pointerMethod()
+	fmt.Println(value.WithReturn())
 
 	fmt.Println()
 
-	pointer := &value2
+	value.method()
+	(&value).pointerMethod()
+	value.pointerMethod()
+
+	fmt.Println()
+
+	pointer := &value
 
 	(*pointer).method()
 	pointer.method()
 	pointer.pointerMethod()
 
-	// &MyType("Value4")
-	// MyType("Value4").method()
-	// MyType("Value4").pointerMethod()
+	// &MyType("Value")
+	// MyType("Value").method()
+	// MyType("Value").pointerMethod()
 
 	fmt.Println()
 
