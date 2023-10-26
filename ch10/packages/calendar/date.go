@@ -8,6 +8,10 @@ type Date struct {
 	day   int
 }
 
+func (d *Date) Year() int {
+	return d.year
+}
+
 func (d *Date) SetYear(year int) error {
 	if year < 1989 || year > 2057 {
 		return errors.New("Invalid Year")
@@ -18,8 +22,8 @@ func (d *Date) SetYear(year int) error {
 	return nil
 }
 
-func (d *Date) Year() int {
-	return d.year
+func (d *Date) Month() int {
+	return d.month
 }
 
 func (d *Date) SetMonth(month int) error {
@@ -32,8 +36,8 @@ func (d *Date) SetMonth(month int) error {
 	return nil
 }
 
-func (d *Date) Month() int {
-	return d.month
+func (d *Date) Day() int {
+	return d.day
 }
 
 func (d *Date) SetDay(day int) error {
@@ -44,8 +48,4 @@ func (d *Date) SetDay(day int) error {
 	d.day = day
 
 	return nil
-}
-
-func (d *Date) Day() int {
-	return d.day
 }
