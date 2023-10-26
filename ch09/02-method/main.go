@@ -80,11 +80,9 @@ func main() {
 	fmt.Println()
 
 	water1 := Liters(2)
-
-	fmt.Printf("%.1f liters equals %.3f gallons\n", water1, water1.toGallons())
-
 	water2 := Milliliters(2000)
 
+	fmt.Printf("%.1f liters equals %.3f gallons\n", water1, water1.toGallons())
 	fmt.Printf("%.1f milliliters equals %.3f gallons\n", water2, water2.toGallons())
 
 	fmt.Println()
