@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"learn-go/ch08-c/packages/magazine"
+	"learn-go/09-structs-c/packages/magazine"
 )
 
 func main() {
