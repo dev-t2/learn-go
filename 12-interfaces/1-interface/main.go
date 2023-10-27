@@ -1,6 +1,6 @@
 package main
 
-import "learn-go/ch11/packages/gadget"
+import "learn-go/12-interfaces/packages/gadget"
 
 func playList(device gadget.TapePlayer, songs []string) {
 	for _, song := range songs {
