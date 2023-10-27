@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"learn-go/ch10/packages/calendar"
+	"learn-go/11-encapsulation/packages/calendar"
 	"log"
 )
 
