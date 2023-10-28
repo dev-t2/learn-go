@@ -30,9 +30,11 @@ func TryOut(player Player) {
 	player.Play("Test")
 	player.Stop()
 
-	recorder := player.(gadget.TapeRecorder)
+	recorder, ok := player.(gadget.TapeRecorder)
 
-	recorder.Record()
+	if ok {
+		recorder.Record()
+	}
 }
 
 func main() {
@@ -58,5 +60,8 @@ func main() {
 	fmt.Println()
 
 	TryOut(gadget.TapeRecorder{})
-	// TryOut(gadget.TapePlayer{})
+
+	fmt.Println()
+
+	TryOut(gadget.TapePlayer{})
 }
