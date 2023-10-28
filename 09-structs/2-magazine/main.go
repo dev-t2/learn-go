@@ -2,26 +2,26 @@ package main
 
 import (
 	"fmt"
-	"learn-go/09-structs/packages/magazine"
+	"learn-go/09-structs/user"
 )
 
 func main() {
-	subscriber1 := magazine.DefaultSubscriber("Austin")
+	subscriber1 := user.DefaultSubscriber("Austin")
 	
-	magazine.PrintInfo(subscriber1)
+	user.PrintInfo(subscriber1)
 
 	fmt.Println()
 
-	subscriber2 := magazine.DefaultSubscriber("Alice")
+	subscriber2 := user.DefaultSubscriber("Alice")
 
-	magazine.ApplyDiscount(subscriber2)
+	user.ApplyDiscount(subscriber2)
 
-	magazine.PrintInfo(subscriber2)
+	user.PrintInfo(subscriber2)
 
 	fmt.Println()
 
-	subscriber := magazine.Subscriber{Name: "Chloe"}
-	address := magazine.Address{Street: "Street", City: "City", State: "State"}
+	subscriber := user.Subscriber{Name: "Chloe"}
+	address := user.Address{Street: "Street", City: "City", State: "State"}
 	
 	subscriber.HomeAddress = address
 	subscriber.HomeAddress.PostalCode = "12345"
@@ -30,7 +30,7 @@ func main() {
 
 	fmt.Println()
 
-	employee := magazine.Employee{Name: "Sally", Salary: 5000}
+	employee := user.Employee{Name: "Sally", Salary: 5000}
 
 	employee.State = "Street"
 	employee.City = "City"

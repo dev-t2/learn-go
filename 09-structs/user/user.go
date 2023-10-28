@@ -1,4 +1,4 @@
-package magazine
+package user
 
 import "fmt"
 
