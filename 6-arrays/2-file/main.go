@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	file, err := os.Open("06-arrays/2-file/data.txt")
+	file, err := os.Open("6-arrays/2-file/data.txt")
 
 	if err != nil {
 		log.Fatal(err)

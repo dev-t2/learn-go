@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"learn-go/09-structs/user"
+	"learn-go/9-structs/user"
 )
 
 func main() {
