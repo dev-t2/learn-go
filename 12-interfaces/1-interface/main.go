@@ -54,13 +54,21 @@ func main() {
 	toy.MakeSound()
 	play(toy)
 
+	fmt.Println()
+
 	toy = Horn("Horn")
 
 	toy.MakeSound()
 	play(toy)
 
+	fmt.Println()
+
 	toy = Robot("Robot")
 
 	toy.MakeSound()
 	play(toy)
+
+	var robot Robot = toy.(Robot)
+	
+	robot.Walk()
 }
