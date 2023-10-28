@@ -21,8 +21,19 @@ func (h Horn) MakeSound() {
 	fmt.Println("Horn")
 }
 
+type Robot string
+
+func (r Robot) MakeSound() {
+	fmt.Println("Robot")
+}
+
+func (r Robot) Walk() {
+	fmt.Println("Robot Walk")
+}
+
 func play(n NoiseMaker) {
 	n.MakeSound()
+	// n.Walk()
 }
 
 func main() {
@@ -44,6 +55,11 @@ func main() {
 	play(toy)
 
 	toy = Horn("Horn")
+
+	toy.MakeSound()
+	play(toy)
+
+	toy = Robot("Robot")
 
 	toy.MakeSound()
 	play(toy)
