@@ -21,6 +21,10 @@ func (h Horn) MakeSound() {
 	fmt.Println("Horn")
 }
 
+func play(n NoiseMaker) {
+	n.MakeSound()
+}
+
 func main() {
 	var value mypackage.MyInterface
 
@@ -37,8 +41,10 @@ func main() {
 	toy = Whistle("Whistle")
 
 	toy.MakeSound()
+	play(toy)
 
 	toy = Horn("Horn")
 
 	toy.MakeSound()
+	play(toy)
 }
