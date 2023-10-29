@@ -3,9 +3,9 @@ package main
 import "fmt"
 
 func calmDown() {
-	r := recover()
+	p := recover()
 
-	err, ok := r.(error)
+	err, ok := p.(error)
 
 	if ok {
 		fmt.Println(err.Error())

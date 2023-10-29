@@ -6,6 +6,20 @@ import (
 	"path/filepath"
 )
 
+func reportPanic() {
+	p := recover()
+
+	if p == nil {
+		return
+	}
+
+	err, ok := p.(error)
+
+	if ok {
+		fmt.Println(err)
+	}
+}
+
 func scanDirectory(path string) {
 	fmt.Println(path)
 
@@ -27,5 +41,7 @@ func scanDirectory(path string) {
 }
 
 func main() {
+	defer reportPanic()
+
 	scanDirectory("13-recovering\\6-files\\packages")
 }
