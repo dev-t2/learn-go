@@ -34,7 +34,7 @@ func scanDirectory(path string) error {
 }
 
 func main() {
-	err := scanDirectory("13-recovering\\4-files\\packages")
+	err := scanDirectory("13-recovering\\5-files\\packages")
 
 	if err != nil {
 		log.Fatal(err)
