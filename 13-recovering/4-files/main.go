@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	files, err := os.ReadDir("13-recovering/4-directory/directories")
+	files, err := os.ReadDir("13-recovering/4-files/directories")
 
 	if err != nil {
 		log.Fatal(err)
