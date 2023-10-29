@@ -27,5 +27,5 @@ func scanDirectory(path string) {
 }
 
 func main() {
-	scanDirectory("13-recovering\\5-files\\packages")
+	scanDirectory("13-recovering\\6-files\\packages")
 }
