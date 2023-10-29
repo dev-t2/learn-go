@@ -17,6 +17,8 @@ func reportPanic() {
 
 	if ok {
 		fmt.Println(err)
+	} else {
+		panic(p)
 	}
 }
 
@@ -42,6 +44,8 @@ func scanDirectory(path string) {
 
 func main() {
 	defer reportPanic()
+
+	// panic("Some other issue")
 
 	scanDirectory("13-recovering\\6-files\\packages")
 }
