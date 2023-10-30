@@ -10,17 +10,20 @@ import (
 
 func main() {
 	fmt.Println("Hello, Go!")
-	fmt.Println("First Argument", "Second Argument")
+	fmt.Println("Argument1", "Argument2")
 
 	fmt.Println()
 
-	fmt.Println(math.Floor(2.75))
+	fmt.Println(math.Floor(1.5))
+	fmt.Println(math.Round(1.5))
+	fmt.Println(math.Ceil(1.5))
+
+	fmt.Println()
+	
 	fmt.Println(cases.Title(language.English).String("go language"))
 
 	fmt.Println()
 
-	fmt.Println("Hello,\nGo!")
-	fmt.Println("Hello,\tGo!")
-	fmt.Println("Quotes: \"\"")
-	fmt.Println("Backslash: \\")
+	fmt.Println("\"Escape Sequence\"")
+	fmt.Println("Escape\nSequence")
 }
