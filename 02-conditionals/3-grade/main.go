@@ -13,14 +13,14 @@ func main() {
 	fmt.Print("Enter a grade: ")
 
 	reader := bufio.NewReader(os.Stdin)
-	input, err := reader.ReadString('\n')
+	str, err := reader.ReadString('\n')
 
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	input = strings.TrimSpace(input)
-	grade, err := strconv.ParseFloat(input, 64)
+	str = strings.TrimSpace(str)
+	grade, err := strconv.ParseFloat(str, 64)
 
 	if err != nil {
 		log.Fatal(err)
