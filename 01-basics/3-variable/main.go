@@ -6,29 +6,6 @@ import (
 )
 
 func main() {
-	// var quantity int
-	// var length, width float64
-	// var name string
-
-	// quantity = 4
-	// length, width = 1.2, 3.75
-	// name = "Go"
-
-	// var quantity = 4
-	// var length, width = 1.2, 3.75
-	// var name = "Go"
-
-	quantity := 4
-	length, width := 1.2, 3.75
-	name := "Go"
-
-	fmt.Println(reflect.TypeOf(quantity))
-	fmt.Println(reflect.TypeOf(length))
-	fmt.Println(reflect.TypeOf(width))
-	fmt.Println(reflect.TypeOf(name))
-
-	fmt.Println()
-
 	var myInt int
 	var myFloat float64
 	var myString string
@@ -41,8 +18,20 @@ func main() {
 
 	fmt.Println()
 
-	height := 2
+	// var num1 int
+	// num1 = 1
 
-	fmt.Println(int(width) * height)
-	fmt.Println(int(width) > height)
+	// var num1 = 1
+
+	num1 := 1
+	num2 := 2.3
+
+	fmt.Println(reflect.TypeOf(num1))
+	fmt.Println(reflect.TypeOf(num2))
+
+	fmt.Println()
+
+	fmt.Println(num1 + int(num2))
+	fmt.Println(num1 < int(num2))
+	fmt.Println(num1 + int(num2) == 5)
 }
