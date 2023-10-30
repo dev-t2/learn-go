@@ -2,22 +2,22 @@ package main
 
 import "fmt"
 
-var packageVar = "package"
+var variable1 = "Package Variable"
 
 func main() {
-	functionVar := "function"
+	variable2 := "Function Variable"
 
 	if true {
-		conditionalVar := "conditional"
+		variable3 := "Conditional Variable"
 
-		fmt.Println(packageVar)
-		fmt.Println(functionVar)
-		fmt.Println(conditionalVar)
+		fmt.Println(variable1)
+		fmt.Println(variable2)
+		fmt.Println(variable3)
 	}
 
 	fmt.Println()
 
-	fmt.Println(packageVar)
-	fmt.Println(functionVar)
-	// fmt.Println(conditionalVar)
+	fmt.Println(variable1)
+	fmt.Println(variable2)
+	// fmt.Println(variable3)
 }
