@@ -13,20 +13,19 @@ func main() {
 
 	fmt.Println()
 
-	fmt.Printf("Float: %f\n", 3.14)
-	fmt.Printf("Integer: %d\n", 15)
-	fmt.Printf("String: %s\n", "Hello, Go!")
-	fmt.Printf("Boolean: %t\n", false)
-	fmt.Printf("Values: %v %v %v\n", 1.2, "\t", true)
-	fmt.Printf("Values: %#v %#v %#v\n", 1.2, "\t", true)
-	fmt.Printf("Types: %T %T %T\n", 1.2, "\t", true)
-	fmt.Printf("Percent Sign: %%\n")
+	fmt.Printf("int: %d\n", 15)
+	fmt.Printf("float: %f\n", 3.141592)
+	fmt.Printf("string: %s\n", "Hello, Go!")
+	fmt.Printf("bool: %t\n", false)
+	fmt.Printf("values: %v %v %v\n", 1.2, "\t", true)
+	fmt.Printf("values: %#v %#v %#v\n", 1.2, "\t", true)
+	fmt.Printf("types: %T %T %T\n", 1.2, "\t", true)
 
 	fmt.Println()
 
-	fmt.Printf("%%7.3f: %7.3f\n", 12.3456)
-	fmt.Printf("%%7.2f: %7.2f\n", 12.3456)
-	fmt.Printf("%%7.1f: %7.1f\n", 12.3456)
-	fmt.Printf("%%.1f: %.1f\n", 12.3456)
-	fmt.Printf("%%.2f: %.2f\n", 12.3456)
+	fmt.Printf("%6.3f\n", 12.3456)
+	fmt.Printf("%6.2f\n", 12.3456)
+	fmt.Printf("%6.1f\n", 12.3456)
+	fmt.Printf("%.1f\n", 12.3456)
+	fmt.Printf("%.2f\n", 12.3456)
 }
