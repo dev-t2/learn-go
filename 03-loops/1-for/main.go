@@ -21,23 +21,19 @@ func main() {
 
 	fmt.Println()
 
-	for i := 15; i >= 5; i -= 5 {
+	for i := 5; i >= 1; i -= 2 {
 		fmt.Println(i)
 	}
 
 	fmt.Println()
 
 	for i := 1; i <= 3; i++ {
-		fmt.Println("i:", i)
-
 		j := i + 1
 
-		fmt.Println("j:", j)
+		fmt.Printf("i: %d, j: %d\n", i, j)
 	}
 
-	// fmt.Println("i:", i)
-	// fmt.Println("j:", j)
-
+	// fmt.Printf("i: %d, j: %d\n", i, j)
 
 	fmt.Println()
 
