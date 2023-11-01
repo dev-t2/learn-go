@@ -21,10 +21,12 @@ func main() {
 	// var num1 int
 	// num1 = 1
 
+	// var num1 int = 1
+
 	// var num1 = 1
 
 	num1 := 1
-	num2 := 2.3
+	num2 := 5.0
 
 	fmt.Println(reflect.TypeOf(num1))
 	fmt.Println(reflect.TypeOf(num2))
@@ -33,5 +35,9 @@ func main() {
 
 	fmt.Println(num1 + int(num2))
 	fmt.Println(num1 < int(num2))
-	fmt.Println(num1 + int(num2) == 5)
+
+	fmt.Println()
+
+	fmt.Println(int(num2) == 5)
+	fmt.Println(int(num2) == 5.0)
 }
