@@ -46,8 +46,8 @@ func main() {
 	fmt.Println(1 > 5)
 	fmt.Println(1 <= 5)
 	fmt.Println(5 >= 5)
-	fmt.Println(1 + 2 == 5)
-	fmt.Println(1 + 2 != 5)
+	fmt.Println(1 == 5)
+	fmt.Println(1 != 5)
 
 	fmt.Println()
 
