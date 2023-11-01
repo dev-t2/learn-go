@@ -15,14 +15,12 @@ func main() {
 	
 	fmt.Println("I've chosen a random number between 1 and 100")
 	fmt.Println("Can you guess it?")
-
-	fmt.Println()
 	
 	reader := bufio.NewReader(os.Stdin)
 	isSuccess := false
 
 	for guesses := 0; guesses < 10; guesses++ {
-		fmt.Println("You have", 10 - guesses, "guesses left")
+		fmt.Println("\nYou have", 10 - guesses, "guesses left")
 		fmt.Print("Make a guess: ")
 
 		str, err := reader.ReadString('\n')
@@ -45,7 +43,7 @@ func main() {
 		} else {
 			isSuccess = true
 
-			fmt.Println("You guessed it")
+			fmt.Println("\nYou guessed it")
 
 			break
 		}
