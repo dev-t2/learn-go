@@ -37,9 +37,8 @@ func main() {
 	myInt, myBool, myString := returns()
 
 	fmt.Println(myInt, myBool, myString)
-	fmt.Println(returns())
 
 	fmt.Println()
 	
-	fmt.Println(floatParts(1.26))
+	fmt.Println(floatParts(1.5))
 }
