@@ -23,6 +23,7 @@ func main() {
 	myInt := 4
 
 	fmt.Println(myInt)
+	fmt.Println(reflect.TypeOf(myInt))
 	fmt.Println(&myInt)
 	fmt.Println(reflect.TypeOf(&myInt))
 
@@ -30,6 +31,8 @@ func main() {
 
 	// var myIntPointer *int
 	// myIntPointer = &myInt
+
+	// var myIntPointer *int = &myInt
 
 	myIntPointer := &myInt
 
