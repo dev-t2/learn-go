@@ -14,7 +14,7 @@ func divide(dividend, divisor float64) (float64, error) {
 	return dividend / divisor, nil
 }
 
-func squareRoot(num float64) (float64, error) {
+func getSquareRoot(num float64) (float64, error) {
 	if num < 0 {
 		return 0, fmt.Errorf("Can't get square root of negative number")
 	}
@@ -37,7 +37,7 @@ func main() {
 
 	fmt.Println()
 
-	result, err := divide(5.6, 0)
+	result, err := divide(1.5, 0)
 
 	if err != nil {
 		fmt.Println(err)
@@ -45,13 +45,11 @@ func main() {
 		fmt.Printf("%.2f\n", result)
 	}
 
-	fmt.Println()
-
-	result, err = squareRoot(-9.3)
+	result, err = getSquareRoot(-2.33333)
 
 	if err != nil {
 		fmt.Println(err)
 	} else {
-		fmt.Printf("%.3f\n", result)
+		fmt.Printf("%.2f\n", result)
 	}
 }
