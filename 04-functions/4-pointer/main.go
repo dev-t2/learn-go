@@ -34,6 +34,8 @@ func main() {
 
 	// var myIntPointer *int = &myInt
 
+	// var myIntPointer = &myInt
+
 	myIntPointer := &myInt
 
 	fmt.Println(myIntPointer)
