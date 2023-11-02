@@ -5,6 +5,7 @@ import (
 	"io"
 	"log"
 	"net/http"
+	"time"
 )
 
 func responseSize(url string) {
@@ -28,6 +29,8 @@ func responseSize(url string) {
 }
 
 func main() {
-	responseSize("https://go.dev")
-	responseSize("https://go.dev/doc")
+	go responseSize("https://go.dev")
+	go responseSize("https://go.dev/doc")
+
+	time.Sleep(time.Second * 5)
 }
