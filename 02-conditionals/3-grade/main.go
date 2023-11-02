@@ -26,7 +26,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	if grade >= 60 {
+	if grade >= 70 {
 		fmt.Println("PASS")
 	} else {
 		fmt.Println("FAIL")
