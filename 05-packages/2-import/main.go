@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	greeting "learn-go/05-packages/3-greeting"
-	"learn-go/05-packages/3-greeting/deutsch"
+	"learn-go/05-packages/2-import/greeting"
+	"learn-go/05-packages/2-import/greeting/deutsch"
 )
 
 func main() {
