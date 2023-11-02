@@ -3,7 +3,7 @@ package main
 
 import (
 	"fmt"
-	"learn-go/05-packages/keyboard"
+	keyboard "learn-go/05-packages/1-keyboard"
 	"log"
 )
 
@@ -16,7 +16,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	if grade >= 60 {
+	if grade >= 70 {
 		fmt.Println("PASS")
 	} else {
 		fmt.Println("FAIL")
