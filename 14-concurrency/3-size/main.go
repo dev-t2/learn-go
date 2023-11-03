@@ -5,10 +5,9 @@ import (
 	"io"
 	"log"
 	"net/http"
-	"time"
 )
 
-func responseSize(url string) {
+func responseSize(channel chan int, url string) {
 	fmt.Println(url)
 
 	response, err := http.Get(url)
@@ -25,12 +24,18 @@ func responseSize(url string) {
 		log.Fatal(err)
 	}
 
-	fmt.Println(len(body))
+	channel <- len(body)
 }
 
 func main() {
-	go responseSize("https://go.dev")
-	go responseSize("https://go.dev/doc")
+	urls := []string{"https://go.dev", "https://go.dev/doc"}
+	channel := make(chan int)
 
-	time.Sleep(time.Second * 5)
+	for _, url := range urls {
+		go responseSize(channel, url)
+	}
+
+	for i := 0; i < len(urls); i++ {
+		fmt.Println(<-channel)
+	}
 }
