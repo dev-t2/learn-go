@@ -7,9 +7,12 @@ import (
 	"net/http"
 )
 
-func responseSize(channel chan int, url string) {
-	fmt.Println(url)
+type Page struct {
+	url string
+	size int
+}
 
+func responseSize(channel chan Page, url string) {
 	response, err := http.Get(url)
 
 	if err != nil {
@@ -24,18 +27,20 @@ func responseSize(channel chan int, url string) {
 		log.Fatal(err)
 	}
 
-	channel <- len(body)
+	channel <- Page{url: url, size: len(body)}
 }
 
 func main() {
 	urls := []string{"https://go.dev", "https://go.dev/doc"}
-	channel := make(chan int)
+	page := make(chan Page)
 
 	for _, url := range urls {
-		go responseSize(channel, url)
+		go responseSize(page, url)
 	}
 
 	for i := 0; i < len(urls); i++ {
-		fmt.Println(<-channel)
+		page := <- page
+
+		fmt.Printf("%s: %d\n", page.url, page.size)
 	}
 }
