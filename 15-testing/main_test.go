@@ -46,6 +46,7 @@ func TestThreeElements(t *testing.T) {
 
 func TestJoinWithCommas(t * testing.T) {
 	tests := []TestData{
+		{list: []string{}, resultValue: ""},
 		{list: []string{"Austin"}, resultValue: "Austin"},
 		{list: []string{"Austin", "Chloe"}, resultValue: "Austin and Chloe"},
 		{list: []string{"Austin", "Chloe", "Sally"}, resultValue: "Austin, Chloe, and Sally"},
