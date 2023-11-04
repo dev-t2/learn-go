@@ -4,16 +4,20 @@ import "testing"
 
 func TestTwoElements(t *testing.T) {
 	list := []string{"Austin", "Chloe"}
+	returnValue := JoinWithCommas(list)
+	resultValue := "Austin and Chloe"
 
-	if JoinWithCommas(list) != "Austin and Chloe" {
-		t.Error("Test Two Elements Error")
+	if returnValue != resultValue {
+		t.Errorf("JoinWithCommas(%#v) => \"%s\" != \"%s\"", list, returnValue, resultValue)
 	}
 }
 
 func TestThreeElements(t *testing.T) {
 	list := []string{"Austin", "Chloe", "Sally"}
+	returnValue := JoinWithCommas(list)
+	resultValue := "Austin, Chloe, and Sally"
 
-	if JoinWithCommas(list) != "Austin, Chloe, and Sally" {
-		t.Error("Test Three Elements Error")
+	if returnValue != resultValue {
+		t.Errorf("JoinWithCommas(%#v) => \"%s\" != \"%s\"", list, returnValue, resultValue)
 	}
 }
