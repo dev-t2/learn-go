@@ -9,6 +9,16 @@ func errorString(list []string, returnValue, resultValue string) string {
 	return fmt.Sprintf("JoinWithCommas(%#v) => \"%s\" != \"%s\"", list, returnValue, resultValue) 
 }
 
+func TestOneElements(t *testing.T) {
+	list := []string{"Austin"}
+	returnValue := JoinWithCommas(list)
+	resultValue := "Austin"
+
+	if returnValue != resultValue {
+		t.Errorf(errorString(list, returnValue, resultValue))
+	}
+}
+
 func TestTwoElements(t *testing.T) {
 	list := []string{"Austin", "Chloe"}
 	returnValue := JoinWithCommas(list)

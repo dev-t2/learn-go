@@ -6,7 +6,9 @@ import (
 )
 
 func JoinWithCommas(phrases []string) string {
-	if len(phrases) == 2 {
+	if len(phrases) == 1 {
+		return phrases[0]
+	}else if len(phrases) == 2 {
 		return phrases[0] + " and " + phrases[1]
 	} else {
 		result := strings.Join(phrases[:len(phrases) - 1], ", ")
@@ -22,7 +24,11 @@ func main() {
 
 	fmt.Println()
 
-	phrases := []string{"Austin", "Chloe"}
+	phrases := []string{"Austin"}
+
+	fmt.Println(JoinWithCommas(phrases))
+
+	phrases = []string{"Austin", "Chloe"}
 
 	fmt.Println(JoinWithCommas(phrases))
 
