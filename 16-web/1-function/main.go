@@ -10,13 +10,23 @@ func sayBye() {
 	fmt.Println("Bye")
 }
 
-func twice(theFunction func()) {
-	theFunction()
-	theFunction()
+func twice(function func()) {
+	function()
+	function()
 }
 
 func divide(a, b int) float64 {
 	return float64(a) / float64(b)
+}
+
+func multiply(a, b int) float64 {
+	return float64(a) * float64(b)
+}
+
+func doMath(function func(int, int) float64) {
+	result := function(10, 2)
+
+	fmt.Println(result)
 }
 
 func main() {
@@ -40,4 +50,9 @@ func main() {
 	mathFunction = divide
 
 	fmt.Println(mathFunction(4, 2))
+
+	fmt.Println()
+
+	doMath(divide)
+	doMath(multiply)
 }
