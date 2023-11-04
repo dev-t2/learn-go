@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func joinWithCommas(phrases []string) string {
+func JoinWithCommas(phrases []string) string {
 	result := strings.Join(phrases[:len(phrases) - 1], ", ")
 	result += ", and "
 	result += phrases[len(phrases) - 1]
@@ -20,9 +20,9 @@ func main() {
 
 	phrases := []string{"Austin", "Chloe"}
 
-	fmt.Println(joinWithCommas(phrases))
+	fmt.Println(JoinWithCommas(phrases))
 
 	phrases = []string{"Austin", "Chloe", "Sally"}
 
-	fmt.Println(joinWithCommas(phrases))
+	fmt.Println(JoinWithCommas(phrases))
 }
