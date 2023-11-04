@@ -10,9 +10,9 @@ func sayBye() {
 	fmt.Println("Bye")
 }
 
-func twice(function func()) {
-	function()
-	function()
+func twice(passedFunction func()) {
+	passedFunction()
+	passedFunction()
 }
 
 func divide(a, b int) float64 {
@@ -23,8 +23,8 @@ func multiply(a, b int) float64 {
 	return float64(a) * float64(b)
 }
 
-func doMath(function func(int, int) float64) {
-	result := function(10, 2)
+func doMath(passedFunction func(int, int) float64) {
+	result := passedFunction(10, 2)
 
 	fmt.Println(result)
 }
