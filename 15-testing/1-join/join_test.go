@@ -1,6 +1,13 @@
 package main
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
+
+func errorString(list []string, returnValue, resultValue string) string {
+	return fmt.Sprintf("JoinWithCommas(%#v) => \"%s\" != \"%s\"", list, returnValue, resultValue) 
+}
 
 func TestTwoElements(t *testing.T) {
 	list := []string{"Austin", "Chloe"}
@@ -8,7 +15,7 @@ func TestTwoElements(t *testing.T) {
 	resultValue := "Austin and Chloe"
 
 	if returnValue != resultValue {
-		t.Errorf("JoinWithCommas(%#v) => \"%s\" != \"%s\"", list, returnValue, resultValue)
+		t.Errorf(errorString(list, returnValue, resultValue))
 	}
 }
 
@@ -18,6 +25,6 @@ func TestThreeElements(t *testing.T) {
 	resultValue := "Austin, Chloe, and Sally"
 
 	if returnValue != resultValue {
-		t.Errorf("JoinWithCommas(%#v) => \"%s\" != \"%s\"", list, returnValue, resultValue)
+		t.Errorf(errorString(list, returnValue, resultValue))
 	}
 }
