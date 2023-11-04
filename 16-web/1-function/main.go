@@ -15,6 +15,10 @@ func twice(theFunction func()) {
 	theFunction()
 }
 
+func divide(a, b int) float64 {
+	return float64(a) / float64(b)
+}
+
 func main() {
 	// var myFunction func()
 	// myFunction = sayHi
@@ -28,4 +32,12 @@ func main() {
 	fmt.Println()
 
 	twice(sayBye)
+
+	fmt.Println()
+
+	var mathFunction func(int, int) float64
+	
+	mathFunction = divide
+
+	fmt.Println(mathFunction(4, 2))
 }
