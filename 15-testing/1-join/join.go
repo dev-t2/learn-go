@@ -1,4 +1,4 @@
-package join
+package main
 
 import (
 	"fmt"
