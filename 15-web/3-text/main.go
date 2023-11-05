@@ -51,13 +51,18 @@ func main() {
 
 	fmt.Println()
 
-	text = "{{if .}}Action: {{.}}{{end}}\n"
+	text = "{{if .}}Action: {{.}}\n{{end}}"
 
 	executeTemplate(text, true)
+	// executeTemplate(text, false)
 
 	fmt.Println()
 
-	text = "Slice: {{.}}\n{{range .}}Action: {{.}}\n{{end}}\n"
+	text = "{{range .}}Action: {{.}}\n{{end}}"
 
 	executeTemplate(text, []string{"a", "b", "c"})
+	// executeTemplate(text, []string{})
+	// executeTemplate(text, nil)
+
+	fmt.Println()
 }
