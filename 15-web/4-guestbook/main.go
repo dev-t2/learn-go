@@ -83,6 +83,8 @@ func createHandler(res http.ResponseWriter, req *http.Request) {
 	err = file.Close()
 
 	check(err)
+
+	http.Redirect(res, req, "/", http.StatusFound)
 }
 
 func main() {
