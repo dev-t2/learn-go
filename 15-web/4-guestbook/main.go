@@ -57,8 +57,20 @@ func viewHandler(res http.ResponseWriter, req *http.Request) {
 	check(err)
 }
 
+func newHandler(res http.ResponseWriter, req *http.Request) {
+	html, err := template.ParseFiles("15-web/4-guestbook/new.html")
+
+	check(err)
+
+	err = html.Execute(res, nil)
+
+	check(err)
+}
+
 func main() {
 	http.HandleFunc("/", viewHandler)
+
+	http.HandleFunc("/new", newHandler)
 
 	err := http.ListenAndServe("localhost:8080", nil)
 
