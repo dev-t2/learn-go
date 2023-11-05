@@ -48,4 +48,14 @@ func main() {
 	fmt.Println()
 
 	executeTemplate(text, 15)
+
+	fmt.Println()
+
+	text = "Template Start\n{{if .}}Action: true\n{{end}}Template End\n"
+
+	executeTemplate(text, true)
+
+	fmt.Println()
+	
+	executeTemplate(text, false)
 }
