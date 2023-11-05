@@ -12,7 +12,7 @@ func check(err error) {
 }
 
 func main() {
-	file, err := os.OpenFile("15-web/5-file/data.txt", os.O_WRONLY, os.FileMode(0600))
+	file, err := os.OpenFile("15-web/6-file/data.txt", os.O_WRONLY, os.FileMode(0600))
 
 	check(err)
 

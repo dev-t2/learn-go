@@ -45,9 +45,9 @@ func getStrings(filename string) []string {
 }
 
 func viewHandler(res http.ResponseWriter, req *http.Request) {
-	signatures := getStrings("15-web/6-guestbook/signatures.txt")
+	signatures := getStrings("15-web/7-guestbook/signatures.txt")
 
-	html, err := template.ParseFiles("15-web/6-guestbook/view.html")
+	html, err := template.ParseFiles("15-web/7-guestbook/view.html")
 
 	check(err)
 
@@ -59,7 +59,7 @@ func viewHandler(res http.ResponseWriter, req *http.Request) {
 }
 
 func newHandler(res http.ResponseWriter, req *http.Request) {
-	html, err := template.ParseFiles("15-web/6-guestbook/new.html")
+	html, err := template.ParseFiles("15-web/7-guestbook/new.html")
 
 	check(err)
 
@@ -72,7 +72,7 @@ func createHandler(res http.ResponseWriter, req *http.Request) {
 	content := req.FormValue("content")
 	options := os.O_WRONLY | os.O_APPEND | os.O_CREATE
 
-	file, err := os.OpenFile("15-web/6-guestbook/signatures.txt", options, os.FileMode(0600))
+	file, err := os.OpenFile("15-web/7-guestbook/signatures.txt", options, os.FileMode(0600))
 
 	check(err)
 
