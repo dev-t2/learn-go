@@ -24,7 +24,7 @@ func executeTemplate(text string, data interface{}) {
 }
 
 func main() {
-	text := "Template Start\nTemplate End\n"
+	text := "Template\n"
 	tmpl, err := template.New("test").Parse(text)
 
 	check(err)
@@ -35,7 +35,7 @@ func main() {
 
 	fmt.Println()
 
-	text = "Template Start\nAction: {{.}}\nTemplate End\n"
+	text = "Action: {{.}}\n"
 
 	tmpl, err = template.New("test").Parse(text)
 
@@ -51,11 +51,13 @@ func main() {
 
 	fmt.Println()
 
-	text = "Template Start\n{{if .}}Action: true\n{{end}}Template End\n"
+	text = "{{if .}}Action: {{.}}{{end}}\n"
 
 	executeTemplate(text, true)
 
 	fmt.Println()
-	
-	executeTemplate(text, false)
+
+	text = "Slice: {{.}}\n{{range .}}Action: {{.}}\n{{end}}\n"
+
+	executeTemplate(text, []string{"a", "b", "c"})
 }
