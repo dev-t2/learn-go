@@ -13,7 +13,7 @@ func check(err error) {
 }
 
 func viewHandler(res http.ResponseWriter, req *http.Request) {
-	html, err := template.ParseFiles("16-templates/view.html")
+	html, err := template.ParseFiles("15-web/4-guestbook/view.html")
 
 	check(err)
 
