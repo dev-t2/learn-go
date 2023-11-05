@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"fmt"
 	"html/template"
 	"log"
 	"net/http"
@@ -69,8 +70,17 @@ func newHandler(res http.ResponseWriter, req *http.Request) {
 
 func createHandler(res http.ResponseWriter, req *http.Request) {
 	content := req.FormValue("content")
+	options := os.O_WRONLY | os.O_APPEND | os.O_CREATE
 
-	_, err := res.Write([]byte(content))
+	file, err := os.OpenFile("15-web/4-guestbook/signatures.txt", options, os.FileMode(0600))
+
+	check(err)
+
+	_, err = fmt.Fprintln(file, content)
+
+	check(err)
+
+	err = file.Close()
 
 	check(err)
 }
