@@ -7,6 +7,11 @@ import (
 	"text/template"
 )
 
+type User struct {
+	Name   string
+	Active bool
+}
+
 func check(err error) {
 	if err != nil {
 		log.Fatal(err)
@@ -65,4 +70,9 @@ func main() {
 	// executeTemplate(text, nil)
 
 	fmt.Println()
+
+	text = "Name: {{.Name}}{{if .Active}}, Active: {{.Active}}{{end}}\n"
+
+	executeTemplate(text, User{Name: "Austin", Active: true})
+	// executeTemplate(text, User{Name: "Chloe", Active: false})
 }
