@@ -11,14 +11,14 @@
     <h1>Guestbook</h1>
 
     <div>
-      <span>X total signatures - </span>
+      <span>{{.Count}} total signatures - </span>
       <a href="/new">Add Your Signature</a>
     </div>
 
     <div>
-      <p>Signatures</p>
-      <p>go</p>
-      <p>here</p>
+      {{range .Contents}}
+      <p>{{.}}</p>
+      {{end}}
     </div>
   </body>
 </html>

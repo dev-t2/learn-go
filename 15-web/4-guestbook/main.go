@@ -2,12 +2,16 @@ package main
 
 import (
 	"bufio"
-	"fmt"
 	"html/template"
 	"log"
 	"net/http"
 	"os"
 )
+
+type Guestbook struct {
+	Count    int
+	Contents []string
+}
 
 func check(err error) {
 	if err != nil {
@@ -42,13 +46,13 @@ func getStrings(filename string) []string {
 func viewHandler(res http.ResponseWriter, req *http.Request) {
 	signatures := getStrings("15-web/4-guestbook/signatures.txt")
 
-	fmt.Printf("%#v\n", signatures)
-
 	html, err := template.ParseFiles("15-web/4-guestbook/view.html")
 
 	check(err)
 
-	err = html.Execute(res, nil)
+	guestbook := Guestbook{Count: len(signatures), Contents: signatures}
+
+	err = html.Execute(res, guestbook)
 
 	check(err)
 }
