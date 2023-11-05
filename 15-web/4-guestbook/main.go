@@ -67,10 +67,20 @@ func newHandler(res http.ResponseWriter, req *http.Request) {
 	check(err)
 }
 
+func createHandler(res http.ResponseWriter, req *http.Request) {
+	content := req.FormValue("content")
+
+	_, err := res.Write([]byte(content))
+
+	check(err)
+}
+
 func main() {
 	http.HandleFunc("/", viewHandler)
 
 	http.HandleFunc("/new", newHandler)
+
+	http.HandleFunc("/create", createHandler)
 
 	err := http.ListenAndServe("localhost:8080", nil)
 
