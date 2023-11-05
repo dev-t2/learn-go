@@ -13,8 +13,18 @@ func check(err error) {
 	}
 }
 
+func executeTemplate(text string, data interface{}) {
+	tmpl, err := template.New("test").Parse(text)
+
+	check(err)
+
+	err = tmpl.Execute(os.Stdout, data)
+
+	check(err)
+}
+
 func main() {
-	text := "Text Template\n"
+	text := "Template Start\nTemplate End\n"
 	tmpl, err := template.New("test").Parse(text)
 
 	check(err)
@@ -31,19 +41,11 @@ func main() {
 
 	check(err)
 
-	err = tmpl.Execute(os.Stdout, "A")
-
-	check(err)
-
-	fmt.Println()
-
 	err = tmpl.Execute(os.Stdout, 15)
 
 	check(err)
 
 	fmt.Println()
 
-	err = tmpl.Execute(os.Stdout, true)
-
-	check(err)
+	executeTemplate(text, 15)
 }
