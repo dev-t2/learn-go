@@ -27,16 +27,6 @@ func main() {
 
 	fmt.Println()
 
-	for i := 1; i <= 3; i++ {
-		j := i + 1
-
-		fmt.Printf("i: %d, j: %d\n", i, j)
-	}
-
-	// fmt.Printf("i: %d, j: %d\n", i, j)
-
-	fmt.Println()
-
 	i := 1
 
 	for i <= 3 {
