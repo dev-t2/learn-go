@@ -6,17 +6,17 @@ import (
 )
 
 func createPointer() *float64 {
-	myFloat := 98.5
+	myFloat := 15.5
 
 	return &myFloat
 }
 
-func printPointer(myBoolPointer *bool) {
-	fmt.Println(*myBoolPointer)
+func printPointer(myFloatPointer *float64) {
+	fmt.Println(*myFloatPointer)
 }
 
-func double(num *int) {
-	*num *= 2
+func double(myFloat *float64) {
+	*myFloat *= 2
 }
 
 func main() {
@@ -55,17 +55,9 @@ func main() {
 
 	fmt.Println(*myFloatPointer)
 
-	fmt.Println()
+	printPointer(myFloatPointer)
 
-	myBool := true
+	double(myFloatPointer)
 
-	printPointer(&myBool)
-
-	fmt.Println()
-
-	amount := 3
-
-	double(&amount)
-
-	fmt.Println(amount)
+	fmt.Println(*myFloatPointer)
 }
