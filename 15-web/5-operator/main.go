@@ -15,7 +15,13 @@ func main() {
 
 	fmt.Println()
 
-	fmt.Printf("%02b\n", 2)
+	fmt.Printf("0 | 0 == %b\n", 0 | 0)
+	fmt.Printf("1 | 0 == %b\n", 1 | 0)
+	fmt.Printf("1 | 1 == %b\n", 1 | 1)
+
+	fmt.Println()
+
+	fmt.Printf("%02b\n", 1)
 	fmt.Printf("%02b\n", 3)
-	fmt.Printf("%02b\n", 2 & 3)
+	fmt.Printf("%02b\n", 1 | 3)
 }
