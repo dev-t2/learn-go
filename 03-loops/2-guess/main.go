@@ -43,13 +43,15 @@ func main() {
 		} else {
 			isSuccess = true
 
-			fmt.Println("\nYou guessed it")
-
 			break
 		}
 	}
 
-	if !isSuccess {
-		fmt.Println("\nIt was:", target)
+	fmt.Println()
+
+	if isSuccess {
+		fmt.Println("You guessed it")
+	} else {
+		fmt.Println("It was:", target)
 	}
 }
