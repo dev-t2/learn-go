@@ -53,8 +53,6 @@ func main() {
 
 	myFloatPointer := createPointer()
 
-	fmt.Println(*myFloatPointer)
-
 	printPointer(myFloatPointer)
 
 	double(myFloatPointer)
