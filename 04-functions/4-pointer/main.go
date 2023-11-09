@@ -6,7 +6,7 @@ import (
 )
 
 func createPointer() *float64 {
-	myFloat := 15.5
+	myFloat := 15.0
 
 	return &myFloat
 }
