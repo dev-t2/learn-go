@@ -7,5 +7,5 @@ func WeeksToDays(weeks int) int {
 }
 
 func DaysToWeeks(days int) int {
-	return (days / DaysInWeek) + 1
+	return days / DaysInWeek
 }
