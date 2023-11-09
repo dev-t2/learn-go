@@ -17,9 +17,9 @@ func main() {
 	fmt.Printf("float: %f\n", 3.141592)
 	fmt.Printf("string: %s\n", "Hello, Go!")
 	fmt.Printf("bool: %t\n", false)
-	fmt.Printf("values: %v %v %v\n", 1.2, "\t", true)
-	fmt.Printf("values: %#v %#v %#v\n", 1.2, "\t", true)
-	fmt.Printf("types: %T %T %T\n", 1.2, "\t", true)
+	fmt.Printf("values: %v %v %v %v\n", 1.2, 'a', "\t", true)
+	fmt.Printf("values: %#v %#v %#v %#v\n", 1.2, 'a', "\t", true)
+	fmt.Printf("types: %T %T %T %T\n", 1.2, 'a', "\t", true)
 
 	fmt.Println()
 
