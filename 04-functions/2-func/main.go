@@ -5,8 +5,8 @@ import (
 	"math"
 )
 
-func sayHi() {
-	fmt.Println("Hi!")
+func printLine() {
+	fmt.Println("hello")
 }
 
 func repeatLine(line string, times int) {
@@ -16,7 +16,7 @@ func repeatLine(line string, times int) {
 }
 
 func returns() (int, bool, string) {
-	return 1, true, "Go"
+	return 1, true, "hello"
 }
 
 func floatParts(num float64) (integerPart int, floatPart float64) {
@@ -26,7 +26,7 @@ func floatParts(num float64) (integerPart int, floatPart float64) {
 }
 
 func main() {
-	sayHi()
+	printLine()
 
 	fmt.Println()
 
