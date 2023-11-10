@@ -64,10 +64,4 @@ func main() {
 	if false || 1 != 1 {
 		fmt.Println("false || 1 != 1")
 	}
-
-	fmt.Println()
-
-	if count := 5; count > 1 {
-		fmt.Println(count)
-	}
 }
