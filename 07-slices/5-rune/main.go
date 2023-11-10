@@ -38,4 +38,28 @@ func main() {
 
 	fmt.Println(string(asciiRunesPartial))
 	fmt.Println(string(utf8RunesPartial))
+
+	fmt.Println()
+
+	for index, currentByte := range asciiBytes {
+		fmt.Printf("%d: %s\n", index, string(currentByte))
+	}
+
+	fmt.Println()
+
+	for index, currentByte := range utf8Bytes {
+		fmt.Printf("%d: %s\n", index, string(currentByte))
+	}
+
+	fmt.Println()
+
+	for index, currentRune := range asciiRunes {
+		fmt.Printf("%d: %s\n", index, string(currentRune))
+	}
+
+	fmt.Println()
+
+	for index, currentRune := range utf8Runes {
+		fmt.Printf("%d: %s\n", index, string(currentRune))
+	}
 }
