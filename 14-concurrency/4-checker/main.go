@@ -1,23 +1,24 @@
 package main
 
 import (
-	"errors"
 	"fmt"
 	"net/http"
 )
 
-func hitUrl(url string) error {
-	fmt.Println("Checking:", url)
+type result struct {
+	url string
+	status string
+}
 
+func hitUrl(channel chan<- result, url string) {
 	res, err := http.Get(url)
+	status := "Success"
 
 	if err != nil || res.StatusCode >= 400{
-		fmt.Println(err, res.StatusCode)
+		status = "Failure"
+	} 
 
-		return errors.New("Request Failed")
-	}
-
-	return nil
+	channel<-result{url: url, status: status}
 }
 
 func main() {
@@ -33,21 +34,23 @@ func main() {
 		"https://go.dev",
 	}
 
-	results := make(map[string]string)
+	channel := make(chan result)
 
 	for _, url := range urls {
-		err := hitUrl(url)
+		go hitUrl(channel, url)
+	}
 
-		if err != nil {
-			results[url] = "Failure"
-		} else {
-			results[url] = "Success"
-		}
+	results := make(map[string] string)
+
+	for i := 0; i < len(urls); i++ {
+		result := <-channel
+
+		results[result.url] = result.status
 	}
 
 	fmt.Println()
 
-	for url, result := range results {
-		fmt.Println(url, result)
+	for url, status := range results {
+		fmt.Println(url, status)
 	}
 }
