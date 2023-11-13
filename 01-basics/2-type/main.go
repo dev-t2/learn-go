@@ -6,18 +6,16 @@ import (
 )
 
 func main() {
+	fmt.Println('a')
 	fmt.Println('1')
-	fmt.Println('A')
-	fmt.Println('b')
 	fmt.Println('가')
 	fmt.Println('"')
 	fmt.Println('\n')
 
 	fmt.Println()
 
+	fmt.Println("a")
 	fmt.Println("1")
-	fmt.Println("A")
-	fmt.Println("b")
 	fmt.Println("가")
 	fmt.Println("\"")
 	// fmt.Println("\n")
@@ -45,14 +43,14 @@ func main() {
 	fmt.Println(1 < 5)
 	fmt.Println(1 > 5)
 	fmt.Println(1 <= 5)
-	fmt.Println(5 >= 5)
+	fmt.Println(1 >= 5)
 	fmt.Println(1 == 5)
 	fmt.Println(1 != 5)
 
 	fmt.Println()
 
-	fmt.Println(reflect.TypeOf('A'))
-	fmt.Println(reflect.TypeOf("A"))
+	fmt.Println(reflect.TypeOf('a'))
+	fmt.Println(reflect.TypeOf("a"))
 	fmt.Println(reflect.TypeOf(true))
 	fmt.Println(reflect.TypeOf(15))
 	fmt.Println(reflect.TypeOf(3.141592))
