@@ -13,28 +13,28 @@ func main() {
 
 	fmt.Println()
 	
-	if 1 < 2 {
-		fmt.Println("1 < 2")
+	if 1 < 5 {
+		fmt.Println("1 < 5")
 	}
 
-	if 1 > 2 {
-		fmt.Println("1 > 2")
+	if 1 > 5 {
+		fmt.Println("1 > 5")
 	}
 
-	if 1 <= 2 {
-		fmt.Println("1 <= 2")
+	if 1 <= 5 {
+		fmt.Println("1 <= 5")
 	}
 
-	if 1 >= 2 {
-		fmt.Println("1 >= 2")
+	if 1 >= 5 {
+		fmt.Println("1 >= 5")
 	}
 
 	if 1 == 1 {
 		fmt.Println("1 == 1")
 	}
 
-	if 2 != 2 {
-		fmt.Println("2 != 2")
+	if 5 != 5 {
+		fmt.Println("5 != 5")
 	}
 
 	fmt.Println()
