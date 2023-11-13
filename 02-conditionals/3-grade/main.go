@@ -9,22 +9,24 @@ import (
 	"strings"
 )
 
+func checkError(err error) {
+	if err != nil {
+		log.Fatal(err)
+	}
+} 
+
 func main() {
 	fmt.Print("Enter a grade: ")
 
 	reader := bufio.NewReader(os.Stdin)
 	str, err := reader.ReadString('\n')
 
-	if err != nil {
-		log.Fatal(err)
-	}
+	checkError(err)
 
 	str = strings.TrimSpace(str)
 	grade, err := strconv.ParseFloat(str, 64)
 
-	if err != nil {
-		log.Fatal(err)
-	}
+	checkError(err)
 
 	if grade >= 70 {
 		fmt.Println("PASS")
