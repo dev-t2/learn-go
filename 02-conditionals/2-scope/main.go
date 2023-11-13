@@ -23,17 +23,17 @@ func main() {
 
 	fmt.Println()
 
-	// count := 5
+	// num := 5
 
-	// if count > 1 {
-	// 	fmt.Println(count)
+	// if num > 1 {
+	// 	fmt.Println(num)
 	// }
 
-	// fmt.Println(count)
+	// fmt.Println(num)
 
-	if count := 5; count > 1 {
-		fmt.Println(count)
+	if num := 5; num > 1 {
+		fmt.Println(num)
 	}
 
-	// fmt.Println(count)
+	// fmt.Println(num)
 }
