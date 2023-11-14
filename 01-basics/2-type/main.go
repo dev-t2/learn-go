@@ -22,11 +22,6 @@ func main() {
 
 	fmt.Println()
 
-	fmt.Println(true)
-	fmt.Println(false)
-
-	fmt.Println()
-
 	fmt.Println(15)
 	fmt.Println(3.141592)
 
@@ -37,6 +32,11 @@ func main() {
 	fmt.Println(3 * 4)
 	fmt.Println(7.5 / 5)
 	fmt.Println(5 % 3)
+
+	fmt.Println()
+
+	fmt.Println(true)
+	fmt.Println(false)
 
 	fmt.Println()
 
@@ -51,7 +51,7 @@ func main() {
 
 	fmt.Println(reflect.TypeOf('a'))
 	fmt.Println(reflect.TypeOf("a"))
-	fmt.Println(reflect.TypeOf(true))
 	fmt.Println(reflect.TypeOf(15))
 	fmt.Println(reflect.TypeOf(3.141592))
+	fmt.Println(reflect.TypeOf(true))
 }
