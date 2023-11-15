@@ -7,12 +7,16 @@ import (
 	"os"
 )
 
-func main() {
-	file, err := os.Open("06-arrays/2-file/data.txt")
-
+func checkError(err error) {
 	if err != nil {
 		log.Fatal(err)
 	}
+}
+
+func main() {
+	file, err := os.Open("06-arrays/2-file/data.txt")
+
+	checkError(err)
 
 	scanner := bufio.NewScanner(file)
 
@@ -22,11 +26,9 @@ func main() {
 
 	err = file.Close()
 
-	if err != nil {
-		log.Fatal(err)
-	}
+	checkError(err)
 
-	if scanner.Err() != nil {
-		log.Fatal(scanner.Err())
-	}
+	err = scanner.Err()
+
+	checkError(err)
 }
