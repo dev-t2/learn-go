@@ -10,6 +10,12 @@ import (
 	"strings"
 )
 
+func checkError(err error) {
+	if err != nil {
+		log.Fatal(err)
+	}
+}
+
 func main() {
 	target := rand.Intn(100) + 1
 	
@@ -25,16 +31,12 @@ func main() {
 
 		str, err := reader.ReadString('\n')
 	
-		if err != nil {
-			log.Fatal(err)
-		}
+		checkError(err)
 	
 		str = strings.TrimSpace(str)
 		num, err := strconv.Atoi(str)
 	
-		if err != nil {
-			log.Fatal(err)
-		}
+		checkError(err)
 	
 		if num < target {
 			fmt.Println("Your guess was LOW")
