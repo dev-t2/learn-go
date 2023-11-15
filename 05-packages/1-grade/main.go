@@ -7,14 +7,18 @@ import (
 	"log"
 )
 
+func checkError(err error) {
+	if err != nil {
+		log.Fatal(err)
+	}
+}
+
 func main() {
 	fmt.Print("Enter a grade: ")
 
 	grade, err := keyboard.GetFloat()
 
-	if err != nil {
-		log.Fatal(err)
-	}
+	checkError(err)
 
 	if grade >= 70 {
 		fmt.Println("PASS")
