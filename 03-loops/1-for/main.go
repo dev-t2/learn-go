@@ -57,7 +57,7 @@ func main() {
 		// fmt.Println("After Continue")
 	}
 
-	fmt.Println("After Loop")
+	fmt.Println("After Continue")
 
 	fmt.Println()
 
@@ -69,5 +69,5 @@ func main() {
 		// fmt.Println("After Break")
 	}
 
-	fmt.Println("After Loop")
+	fmt.Println("After Break")
 }
