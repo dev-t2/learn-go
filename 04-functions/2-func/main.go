@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"math"
 )
 
 func printLine() {
@@ -15,14 +14,8 @@ func repeatLine(line string, times int) {
 	}
 }
 
-func returns() (int, bool, string) {
-	return 1, true, "hello"
-}
-
-func floatParts(num float64) (integerPart int, floatPart float64) {
-	wholeNumber := math.Floor(num)
-
-	return int(wholeNumber), num - wholeNumber
+func returns() (string, int, bool) {
+	return "hello", 1, true 
 }
 
 func main() {
@@ -37,8 +30,4 @@ func main() {
 	myInt, myBool, myString := returns()
 
 	fmt.Println(myInt, myBool, myString)
-
-	fmt.Println()
-	
-	fmt.Println(floatParts(1.5))
 }
