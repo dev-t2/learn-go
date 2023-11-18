@@ -5,18 +5,18 @@ import (
 	"reflect"
 )
 
-func createPointer() *float64 {
-	myFloat := 15.0
+func createPointer() *int {
+	myInt := 15
 
-	return &myFloat
+	return &myInt
 }
 
-func printPointer(myFloatPointer *float64) {
-	fmt.Println(*myFloatPointer)
+func printPointer(myInt *int) {
+	fmt.Println(*myInt)
 }
 
-func double(myFloat *float64) {
-	*myFloat *= 2
+func double(myInt *int) {
+	*myInt *= 2
 }
 
 func main() {
@@ -51,11 +51,11 @@ func main() {
 
 	fmt.Println()
 
-	myFloatPointer := createPointer()
+	myIntPointer = createPointer()
 
-	printPointer(myFloatPointer)
+	printPointer(myIntPointer)
 
-	double(myFloatPointer)
+	double(myIntPointer)
 
-	fmt.Println(*myFloatPointer)
+	fmt.Println(*myIntPointer)
 }
