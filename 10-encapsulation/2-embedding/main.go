@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"learn-go/11-encapsulation/calendar"
-	"learn-go/11-encapsulation/mypackage"
+	"learn-go/10-encapsulation/packages/calendar"
+	"learn-go/10-encapsulation/packages/mypackage"
 	"log"
 )
 
