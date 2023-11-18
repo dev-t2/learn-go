@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"learn-go/12-interfaces/mypackage"
+	"learn-go/11-interfaces/packages/mypackage"
 )
 
 type NoiseMaker interface {
