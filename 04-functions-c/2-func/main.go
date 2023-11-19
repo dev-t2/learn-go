@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func printLine() {
 	fmt.Println("hello")
@@ -15,7 +13,7 @@ func repeatLine(line string, times int) {
 }
 
 func returns() (string, int, bool) {
-	return "hello", 1, true 
+	return "hello", 1, true
 }
 
 func main() {
