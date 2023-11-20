@@ -3,9 +3,6 @@ package main
 import "fmt"
 
 func main() {
-	// var nums []int
-	// nums = make([]int, 5)
-
 	nums := make([]int, 5)
 
 	nums[2] = 2
@@ -23,7 +20,6 @@ func main() {
 
 	notes := []string{"do", "re", "mi", "fa", "so", "la", "ti"}
 
-	fmt.Println(notes[0], notes[3], notes[6])
 	fmt.Println(notes)
 	fmt.Printf("%#v\n", notes)
 
