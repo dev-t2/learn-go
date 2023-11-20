@@ -3,7 +3,7 @@ package main
 
 import (
 	"fmt"
-	"learn-go/05-packages/1-grade/keyboard"
+	"learn-go/05-packages-c/1-grade/keyboard"
 	"log"
 )
 

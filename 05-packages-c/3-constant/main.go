@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"learn-go/05-packages/3-constant/date"
+	"learn-go/05-packages-c/3-constant/date"
 )
 
 func main() {
