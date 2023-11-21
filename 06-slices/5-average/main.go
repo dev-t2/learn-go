@@ -7,7 +7,7 @@ import (
 	"strconv"
 )
 
-func average(nums ...float64) float64 {
+func average(nums ...float64) (result float64) {
 	sum := 0.0
 
 	for _, num := range nums {
@@ -18,12 +18,12 @@ func average(nums ...float64) float64 {
 }
 
 func main() {
-	arguments := os.Args[1:]
+	args := os.Args[1:]
 	
 	var nums []float64
 
-	for _, argument := range arguments {
-		num, err := strconv.ParseFloat(argument, 64)
+	for _, arg := range args {
+		num, err := strconv.ParseFloat(arg, 64)
 
 		if err != nil {
 			log.Fatal(err)
