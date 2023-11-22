@@ -11,10 +11,6 @@ func main() {
 
 	fmt.Println(slice, len(slice))
 
-	slice = append(slice, "d", "e")
-
-	fmt.Println(slice, len(slice))
-
 	fmt.Println()
 
 	s1 := []string{"s1", "s1"}
