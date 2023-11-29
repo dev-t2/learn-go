@@ -64,14 +64,4 @@ func main() {
 	fmt.Println(slice2)
 	fmt.Println(slice3)
 	fmt.Println(slice4)
-
-	fmt.Println()
-
-	slice1[2] = "y" 
-
-	fmt.Println(array)
-	fmt.Println(slice1)
-	fmt.Println(slice2)
-	fmt.Println(slice3)
-	fmt.Println(slice4)
 }
