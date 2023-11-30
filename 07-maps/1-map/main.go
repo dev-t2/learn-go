@@ -37,14 +37,6 @@ func main() {
 
 	fmt.Println(value, ok)
 
-	value, ok = counter["b"]
-
-	fmt.Println(value, ok)
-
-	value, ok = counter["c"]
-
-	fmt.Println(value, ok)
-
 	delete(counter, "a")
 
 	value, ok = counter["a"]
