@@ -7,13 +7,9 @@ func main() {
 
 	fmt.Println(q)
 
-	fmt.Println()
-
 	r := []bool{true, false, true, true, false, true}
 	
 	fmt.Println(r)
-
-	fmt.Println()
 
 	s := []struct{ 
 		i int
